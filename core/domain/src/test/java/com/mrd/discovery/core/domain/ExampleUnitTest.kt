@@ -1,4 +1,4 @@
-package com.mrd.discovery.core.model
+package com.mrd.discovery.core.domain
 
 import org.junit.Test
 

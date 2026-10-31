@@ -1,4 +1,4 @@
-package com.mrd.discovery.core.model
+package com.mrd.discovery.core.domain
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
