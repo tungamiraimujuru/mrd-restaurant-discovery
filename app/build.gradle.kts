@@ -54,6 +54,10 @@ dependencies {
     implementation(projects.feature.discovery)
     implementation(projects.feature.details)
 
+    implementation(projects.core.domain)
+    implementation(projects.core.network)
+    implementation(libs.androidx.lifecycle.runtime.compose)
+
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.material3)
