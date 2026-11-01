@@ -7,9 +7,11 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
         with(target) {
             pluginManager.apply("mrd.android.compose")
             pluginManager.apply("mrd.android.hilt")
+            pluginManager.apply("org.jetbrains.kotlin.plugin.serialization")
 
             dependencies {
                 add("implementation", libs.findLibrary("androidx-hilt-navigation-compose").get())
+                add("implementation", libs.findLibrary("androidx-navigation-compose").get())
             }
         }
     }
