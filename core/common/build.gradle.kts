@@ -1,27 +1,14 @@
 plugins {
     id("mrd.android.library")
+    id("mrd.android.hilt")
 }
 
 android {
     namespace = "com.mrd.discovery.core.common"
-    compileSdk {
-        version = release(37)
-    }
-
-    defaultConfig {
-        minSdk = 26
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-    }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
-    }
 }
 
 dependencies {
-    implementation(libs.androidx.core.ktx)
+    api(libs.kotlinx.coroutines.core)
+
     testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation(libs.androidx.junit)
 }
