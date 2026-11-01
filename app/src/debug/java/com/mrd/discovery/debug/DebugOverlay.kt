@@ -93,7 +93,7 @@ private fun BackendDialog(fakeBackend: FakeBackendConfig, onDismiss: () -> Unit)
                     }
                 }
                 Text(
-                    text = "A change applies to the next refresh. Tap Retry on the screen to try it.",
+                    text = "A change applies to the next refresh. Pull down on the list or tap Retry to try it.",
                     style = MaterialTheme.typography.bodySmall,
                 )
             }

@@ -6,6 +6,7 @@ import com.mrd.discovery.core.designsystem.theme.MrDTheme
 import com.mrd.discovery.core.network.fake.FakeBackendConfig
 import com.mrd.discovery.core.ui.BaseActivity
 import com.mrd.discovery.debug.DebugOverlay
+import com.mrd.discovery.debug.applyDebugLaunchOverrides
 import com.mrd.discovery.navigation.MrDNavHost
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -17,6 +18,7 @@ class MainActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        if (savedInstanceState == null) applyDebugLaunchOverrides(intent, fakeBackend)
         setContent {
             MrDTheme {
                 DebugOverlay(fakeBackend = fakeBackend) {
