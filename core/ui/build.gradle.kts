@@ -1,5 +1,5 @@
 plugins {
-    id("mrd.android.library")
+    id("mrd.android.compose")
 }
 
 android {
