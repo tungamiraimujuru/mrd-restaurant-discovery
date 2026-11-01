@@ -1,29 +1,31 @@
 plugins {
     id("mrd.android.library")
+    id("mrd.android.hilt")
+    alias(libs.plugins.google.ksp)
 }
 
 android {
     namespace = "com.mrd.discovery.core.database"
-    compileSdk {
-        version = release(37)
-    }
 
     defaultConfig {
-        minSdk = 26
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-    }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
     }
 }
 
+ksp {
+    // Exported schemas are committed so future migrations can be written and tested against them.
+    arg("room.schemaLocation", "$projectDir/schemas")
+}
+
 dependencies {
-    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
+    ksp(libs.androidx.room.compiler)
+    implementation(libs.kotlinx.coroutines.core)
+
     testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+
     androidTestImplementation(libs.androidx.junit)
-    implementation(projects.core.domain)
-    implementation(projects.core.common)
+    androidTestImplementation(libs.androidx.test.core)
+    androidTestImplementation(libs.androidx.test.runner)
 }
