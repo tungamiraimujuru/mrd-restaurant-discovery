@@ -23,6 +23,12 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
                     sourceCompatibility = JavaVersion.VERSION_17
                     targetCompatibility = JavaVersion.VERSION_17
                 }
+                lint {
+                    warningsAsErrors = true
+                    abortOnError = true
+                    // Dependency-freshness checks fail builds when a new release ships, not when code is wrong
+                    disable += setOf("GradleDependency", "NewerVersionAvailable", "AndroidGradlePluginVersion")
+                }
             }
         }
     }
