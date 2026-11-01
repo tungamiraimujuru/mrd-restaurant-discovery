@@ -16,6 +16,9 @@ ksp = "2.3.8"
 hilt = "2.60.1"
 hiltNavigationCompose = "1.4.0"
 navigationCompose = "2.10.2"
+spotless = "8.6.0"
+ktlint = "1.8.0"
+composeRules = "0.6.6"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -49,3 +52,4 @@ kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "ko
 android-library = { id = "com.android.library", version.ref = "agp" }
 google-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
