@@ -31,6 +31,12 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+
+    lint {
+        warningsAsErrors = true
+        abortOnError = true
+        disable += setOf("GradleDependency", "NewerVersionAvailable", "AndroidGradlePluginVersion")
+    }
     buildFeatures {
         compose = true
     }
