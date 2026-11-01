@@ -9,13 +9,17 @@ import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.rememberUpdatedState
+import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
@@ -31,6 +35,7 @@ import com.mrd.discovery.core.designsystem.components.MrDSearchBar
 import com.mrd.discovery.core.designsystem.components.OfflineBanner
 import com.mrd.discovery.core.designsystem.theme.MrDSpacing
 import com.mrd.discovery.core.designsystem.theme.MrDTheme
+import kotlinx.coroutines.flow.drop
 
 @Composable
 internal fun DiscoveryScreen(
@@ -80,6 +85,8 @@ internal fun DiscoveryScreenContent(
 
                     is DiscoveryContent.Loaded -> RestaurantList(
                         content = content,
+                        query = state.query,
+                        openNowOnly = state.openNowOnly,
                         isRefreshing = state.isRefreshing,
                         bottomInset = innerPadding.calculateBottomPadding(),
                         onRefresh = onRefresh,
@@ -137,6 +144,8 @@ private fun DiscoveryHeader(state: DiscoveryUiState, onQueryChange: (String) -> 
 @Composable
 private fun RestaurantList(
     content: DiscoveryContent.Loaded,
+    query: String,
+    openNowOnly: Boolean,
     isRefreshing: Boolean,
     bottomInset: Dp,
     onRefresh: () -> Unit,
@@ -144,12 +153,22 @@ private fun RestaurantList(
     onFavoriteClick: (String, Boolean) -> Unit,
     modifier: Modifier = Modifier,
 ) {
+    val listState = rememberLazyListState()
+    // A new search or filter starts at the top. The first value is skipped on purpose: it is the
+    // composition itself, and after rotation the restored scroll position must be left alone.
+    // snapshotFlow only sees Compose state, and these are plain parameters. rememberUpdatedState
+    // makes them observable without restarting the effect, so a restored scroll position survives.
+    val currentFilter by rememberUpdatedState(query to openNowOnly)
+    LaunchedEffect(listState) {
+        snapshotFlow { currentFilter }.drop(1).collect { listState.scrollToItem(0) }
+    }
     PullToRefreshBox(
         isRefreshing = isRefreshing,
         onRefresh = onRefresh,
         modifier = modifier,
     ) {
         LazyColumn(
+            state = listState,
             modifier = Modifier.fillMaxSize(),
             contentPadding = PaddingValues(
                 start = MrDSpacing.md,
