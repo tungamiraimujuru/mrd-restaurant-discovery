@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="restaurant_open">OPEN</string>
+    <string name="restaurant_closed">CLOSED</string>
+    <string name="restaurant_eta">%1$d min</string>
+    <string name="restaurant_fee_free">Free delivery</string>
+    <string name="restaurant_fee_paid">%1$s delivery</string>
+
+    <string name="discovery_title">Restaurants near you</string>
+    <plurals name="discovery_count">
+        <item quantity="one">(%1$d restaurant found)</item>
+        <item quantity="other">(%1$d restaurants found)</item>
+    </plurals>
+    <string name="discovery_search_placeholder">Search restaurants</string>
+    <string name="discovery_filter_open_now">Open now</string>
+    <string name="discovery_loading">Loading restaurants</string>
+    <string name="discovery_retry">Retry</string>
+
+    <string name="discovery_empty_title">No restaurants found</string>
+    <string name="discovery_empty_filtered_message">Try a different search or turn off Open now.</string>
+    <string name="discovery_empty_feed_message">There are no restaurants available right now.</string>
+
+    <string name="discovery_error_title">Could not load restaurants</string>
+    <string name="discovery_error_network">Check your internet connection and try again.</string>
+    <string name="discovery_error_timeout">The request took too long. Please try again.</string>
+    <string name="discovery_error_unknown">Something went wrong. Please try again.</string>
+
+    <string name="discovery_offline_title">Working offline</string>
+    <string name="discovery_offline_message">Showing saved restaurants</string>
+    <string name="discovery_offline_message_now">Showing saved restaurants (synced just now)</string>
+    <string name="discovery_offline_message_minutes">Showing saved restaurants (synced %1$d min ago)</string>
+</resources>
