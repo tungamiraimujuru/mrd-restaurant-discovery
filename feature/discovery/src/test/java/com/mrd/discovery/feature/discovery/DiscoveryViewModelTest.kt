@@ -198,6 +198,18 @@ class DiscoveryViewModelTest {
         runCurrent()
         assertFalse(states.last().isRefreshing)
     }
+
+    @Test
+    fun favoriteClickSavesTheRequestedState() = runTest(mainRule.dispatcher) {
+        val viewModel = newViewModel()
+        runCurrent()
+
+        viewModel.onFavoriteClick("r-1", true)
+        viewModel.onFavoriteClick("r-1", true)
+        runCurrent()
+
+        assertEquals(listOf("r-1" to true, "r-1" to true), repository.favoriteCalls)
+    }
 }
 
 private class FakeRestaurantRepository : RestaurantRepository {
@@ -221,5 +233,9 @@ private class FakeRestaurantRepository : RestaurantRepository {
         return AppResult.Success(Unit)
     }
 
-    override suspend fun setFavorite(id: String, favorite: Boolean) = Unit
+    val favoriteCalls = mutableListOf<Pair<String, Boolean>>()
+
+    override suspend fun setFavorite(id: String, favorite: Boolean) {
+        favoriteCalls += id to favorite
+    }
 }

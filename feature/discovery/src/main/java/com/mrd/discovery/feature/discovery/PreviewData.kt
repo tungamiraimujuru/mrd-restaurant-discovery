@@ -1,5 +1,7 @@
 package com.mrd.discovery.feature.discovery
 
+import com.mrd.discovery.core.ui.format.DeliveryFee
+
 /** Sample data for previews only. */
 internal fun previewRestaurant(
     id: String = "r-1001",

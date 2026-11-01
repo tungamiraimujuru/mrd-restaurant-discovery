@@ -2,6 +2,7 @@ package com.mrd.discovery.feature.discovery
 
 import com.mrd.discovery.core.common.format.CurrencyFormatter
 import com.mrd.discovery.core.domain.model.Restaurant
+import com.mrd.discovery.core.ui.format.DeliveryFee
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
 import org.junit.Test

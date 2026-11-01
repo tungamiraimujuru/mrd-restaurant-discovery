@@ -1,6 +1,7 @@
 package com.mrd.discovery.feature.discovery
 
 import androidx.compose.runtime.Immutable
+import com.mrd.discovery.core.ui.format.DeliveryFee
 
 /** Everything the card needs, already formatted, so composition does no work beyond layout. */
 @Immutable

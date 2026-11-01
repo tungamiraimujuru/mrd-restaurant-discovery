@@ -20,17 +20,24 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.mrd.discovery.core.designsystem.components.FavoriteButton
 import com.mrd.discovery.core.designsystem.components.InfoChip
 import com.mrd.discovery.core.designsystem.components.MrDImage
 import com.mrd.discovery.core.designsystem.components.RatingPill
 import com.mrd.discovery.core.designsystem.components.StatusBadge
 import com.mrd.discovery.core.designsystem.theme.MrDSpacing
 import com.mrd.discovery.core.designsystem.theme.MrDTheme
+import com.mrd.discovery.core.ui.format.DeliveryFee
 
 private val ImageHeight = 176.dp
 
 @Composable
-internal fun RestaurantCard(restaurant: RestaurantUiModel, onClick: () -> Unit, modifier: Modifier = Modifier) {
+internal fun RestaurantCard(
+    restaurant: RestaurantUiModel,
+    onClick: () -> Unit,
+    onFavoriteClick: () -> Unit,
+    modifier: Modifier = Modifier,
+) {
     Card(
         onClick = onClick,
         modifier = modifier.fillMaxWidth(),
@@ -38,13 +45,13 @@ internal fun RestaurantCard(restaurant: RestaurantUiModel, onClick: () -> Unit, 
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceContainerLowest),
         border = BorderStroke(MrDSpacing.border, MaterialTheme.colorScheme.surfaceContainerHigh),
     ) {
-        CardImage(restaurant)
+        CardImage(restaurant = restaurant, onFavoriteClick = onFavoriteClick)
         CardDetails(restaurant)
     }
 }
 
 @Composable
-private fun CardImage(restaurant: RestaurantUiModel) {
+private fun CardImage(restaurant: RestaurantUiModel, onFavoriteClick: () -> Unit) {
     Box(modifier = Modifier.fillMaxWidth().height(ImageHeight)) {
         MrDImage(
             url = restaurant.imageUrl,
@@ -55,6 +62,14 @@ private fun CardImage(restaurant: RestaurantUiModel) {
             text = stringResource(if (restaurant.isOpen) R.string.restaurant_open else R.string.restaurant_closed),
             isOpen = restaurant.isOpen,
             modifier = Modifier.align(Alignment.TopStart).padding(MrDSpacing.sm),
+        )
+        FavoriteButton(
+            isFavorite = restaurant.isFavorite,
+            onClick = onFavoriteClick,
+            contentDescription = stringResource(
+                if (restaurant.isFavorite) R.string.restaurant_favorite_remove else R.string.restaurant_favorite_add,
+            ),
+            modifier = Modifier.align(Alignment.TopEnd).padding(MrDSpacing.xs),
         )
         restaurant.etaMinutes?.let { minutes ->
             InfoChip(
@@ -121,15 +136,16 @@ private fun RestaurantCardPreview() {
             modifier = Modifier.padding(MrDSpacing.md),
             verticalArrangement = Arrangement.spacedBy(MrDSpacing.md),
         ) {
-            RestaurantCard(restaurant = previewRestaurant(), onClick = {})
+            RestaurantCard(restaurant = previewRestaurant(), onClick = {}, onFavoriteClick = {})
             RestaurantCard(
                 restaurant = previewRestaurant(
                     id = "r-1002",
                     name = "Sushi on Sea Point",
                     isOpen = false,
                     fee = DeliveryFee.Free,
-                ),
+                ).copy(isFavorite = true),
                 onClick = {},
+                onFavoriteClick = {},
             )
         }
     }

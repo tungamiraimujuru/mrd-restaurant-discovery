@@ -29,4 +29,6 @@
     <string name="discovery_offline_message">Showing saved restaurants</string>
     <string name="discovery_offline_message_now">Showing saved restaurants (synced just now)</string>
     <string name="discovery_offline_message_minutes">Showing saved restaurants (synced %1$d min ago)</string>
+    <string name="restaurant_favorite_add">Add to favorites</string>
+    <string name="restaurant_favorite_remove">Remove from favorites</string>
 </resources>
