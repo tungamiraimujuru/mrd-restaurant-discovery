@@ -63,4 +63,5 @@ dependencies {
     implementation(projects.core.data)
     implementation(projects.feature.discovery)
     implementation(projects.feature.details)
+    lintChecks(libs.slack.compose.lint.checks)
 }
