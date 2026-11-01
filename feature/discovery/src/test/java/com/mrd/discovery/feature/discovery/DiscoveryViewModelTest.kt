@@ -21,6 +21,7 @@ import kotlinx.coroutines.test.runTest
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNull
+import org.junit.Assert.assertSame
 import org.junit.Assert.assertTrue
 import org.junit.Rule
 import org.junit.Test
@@ -34,7 +35,7 @@ class DiscoveryViewModelTest {
     private var now = 10 * 60_000L
 
     private fun newViewModel(handle: SavedStateHandle = SavedStateHandle()) =
-        DiscoveryViewModel(repository, CurrencyFormatter(), { now }, handle)
+        DiscoveryViewModel(repository, CurrencyFormatter(), { now }, mainRule.dispatcher, handle)
 
     private fun TestScope.collect(viewModel: DiscoveryViewModel): List<DiscoveryUiState> {
         val states = mutableListOf<DiscoveryUiState>()
@@ -209,6 +210,35 @@ class DiscoveryViewModelTest {
         runCurrent()
 
         assertEquals(listOf("r-1" to true, "r-1" to true), repository.favoriteCalls)
+    }
+
+    @Test
+    fun keystrokesDoNotRemapTheList() = runTest(mainRule.dispatcher) {
+        repository.restaurants.value = listOf(restaurant("1", "Sushi"), restaurant("2", "Grill"))
+        repository.syncState.value = synced()
+        val viewModel = newViewModel()
+        val states = collect(viewModel)
+        val before = (states.last().content as DiscoveryContent.Loaded).restaurants
+
+        viewModel.onQueryChange("s")
+        runCurrent()
+
+        assertEquals("s", states.last().query)
+        assertSame(before, (states.last().content as DiscoveryContent.Loaded).restaurants)
+    }
+
+    @Test
+    fun syncStateChangesDoNotRemapTheList() = runTest(mainRule.dispatcher) {
+        repository.restaurants.value = listOf(restaurant("1", "Sushi"))
+        repository.syncState.value = synced()
+        val states = collect(newViewModel())
+        val before = (states.last().content as DiscoveryContent.Loaded).restaurants
+
+        repository.syncState.value = SyncState(isRefreshing = true, lastSyncedAtMillis = now)
+        runCurrent()
+
+        assertTrue(states.last().isRefreshing)
+        assertSame(before, (states.last().content as DiscoveryContent.Loaded).restaurants)
     }
 }
 
