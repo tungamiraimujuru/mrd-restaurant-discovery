@@ -1,0 +1,3206 @@
+{
+  "restaurants": [
+    {
+      "id": "r-1001",
+      "name": "Cape Town Grill",
+      "cuisines": [
+        "Steakhouse",
+        "Grill"
+      ],
+      "rating": 4.6,
+      "delivery_fee_cents": 1500,
+      "eta_minutes": 32,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1001/640/360"
+    },
+    {
+      "id": "r-1002",
+      "name": "Sushi on Sea Point",
+      "cuisines": [
+        "Sushi",
+        "Japanese"
+      ],
+      "rating": 4.3,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 25,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1002/640/360"
+    },
+    {
+      "id": "r-1003",
+      "name": "Sweet Tooth",
+      "cuisines": [
+        "Desserts",
+        "Ice Cream"
+      ],
+      "rating": 3.3,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 18,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1003/640/360"
+    },
+    {
+      "id": "r-1004",
+      "name": "Pasta Fresca Sea Point",
+      "cuisines": [
+        "Pizza",
+        "Italian"
+      ],
+      "rating": 4.0,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 46,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1004/640/360"
+    },
+    {
+      "id": "r-1005",
+      "name": "Masala Bay Sea Point",
+      "cuisines": [
+        "Indian",
+        "Curry"
+      ],
+      "rating": 3.6,
+      "delivery_fee_cents": 1800,
+      "eta_minutes": null,
+      "is_open": true,
+      "image_url": null
+    },
+    {
+      "id": "r-1006",
+      "name": "Wok This Way",
+      "rating": 3.4,
+      "delivery_fee_cents": 1200,
+      "eta_minutes": 57,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1006/640/360"
+    },
+    {
+      "id": "r-1007",
+      "name": "Nori",
+      "cuisines": [
+        "Sushi",
+        "Japanese"
+      ],
+      "rating": 4.1,
+      "delivery_fee_cents": 3500,
+      "eta_minutes": 28,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1007/640/360"
+    },
+    {
+      "id": "r-1008",
+      "name": "Blue Marlin",
+      "cuisines": [
+        "Seafood",
+        "Mediterranean"
+      ],
+      "rating": 3.8,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 26,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1008/640/360"
+    },
+    {
+      "id": "r-1009",
+      "name": "Flame Chicken Sea Point",
+      "cuisines": [
+        "Chicken",
+        "Peri-Peri"
+      ],
+      "rating": 3.8,
+      "delivery_fee_cents": 2900,
+      "eta_minutes": 23,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1009/640/360"
+    },
+    {
+      "id": "r-1010",
+      "name": "Daily Bread",
+      "cuisines": [
+        "Bakery",
+        "Breakfast"
+      ],
+      "rating": 4.0,
+      "delivery_fee_cents": 1200,
+      "eta_minutes": 55,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1010/640/360"
+    },
+    {
+      "id": "r-1011",
+      "name": "Pasta Fresca",
+      "cuisines": [
+        "Pizza",
+        "Italian"
+      ],
+      "rating": 3.9,
+      "delivery_fee_cents": 1200,
+      "eta_minutes": 17,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1011/640/360"
+    },
+    {
+      "id": "r-1012",
+      "name": "Chicken Shack",
+      "cuisines": [
+        "Chicken",
+        "Peri-Peri"
+      ],
+      "delivery_fee_cents": 1200,
+      "eta_minutes": 19,
+      "image_url": "https://picsum.photos/seed/r-1012/640/360"
+    },
+    {
+      "id": "r-1013",
+      "name": "Sugar Rush Gardens",
+      "cuisines": [
+        "Desserts",
+        "Ice Cream"
+      ],
+      "rating": 4.6,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 55,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1013/640/360"
+    },
+    {
+      "id": "r-1014",
+      "name": "Smash House Claremont",
+      "cuisines": [
+        "Burgers",
+        "American"
+      ],
+      "rating": 4.2,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 26,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1014/640/360"
+    },
+    {
+      "id": "r-1015",
+      "name": "Chicken Shack Sea Point",
+      "cuisines": [
+        "Chicken",
+        "Peri-Peri"
+      ],
+      "rating": 4.1,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 34,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1015/640/360"
+    },
+    {
+      "id": "r-1016",
+      "name": "Green Bowl Newlands",
+      "cuisines": [
+        "Healthy",
+        "Vegan"
+      ],
+      "rating": null,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 25,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1016/640/360"
+    },
+    {
+      "id": "r-1017",
+      "name": "Coop & Co Woodstock",
+      "cuisines": [
+        "Chicken",
+        "Peri-Peri"
+      ],
+      "rating": 4.3,
+      "delivery_fee_cents": 2900,
+      "eta_minutes": 39,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1017/640/360"
+    },
+    {
+      "id": "r-1018",
+      "name": "Luigi's",
+      "cuisines": [
+        "Pizza",
+        "Italian"
+      ],
+      "rating": 3.6,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 35,
+      "is_open": true
+    },
+    {
+      "id": "r-1019",
+      "name": "Catch of the Day Bellville",
+      "cuisines": [
+        "Seafood",
+        "Mediterranean"
+      ],
+      "rating": 3.5,
+      "delivery_fee_cents": 2900,
+      "eta_minutes": 35,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1019/640/360"
+    },
+    {
+      "id": "r-1020",
+      "name": "Plant Pantry",
+      "cuisines": [
+        "Healthy",
+        "Vegan"
+      ],
+      "rating": 4.1,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 25,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1020/640/360"
+    },
+    {
+      "id": "r-1021",
+      "name": "Peri Palace Camps Bay",
+      "cuisines": [
+        "Chicken",
+        "Peri-Peri"
+      ],
+      "rating": 3.7,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 44,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1021/640/360"
+    },
+    {
+      "id": "r-1022",
+      "name": "Luigi's Sea Point",
+      "cuisines": [
+        "Pizza",
+        "Italian"
+      ],
+      "rating": 3.4,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 22,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1022/640/360"
+    },
+    {
+      "id": "r-1023",
+      "name": "Harbour Fish",
+      "cuisines": [
+        "Seafood",
+        "Mediterranean"
+      ],
+      "rating": 4.2,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 46,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1023/640/360"
+    },
+    {
+      "id": "r-1024",
+      "name": "Bella Italia",
+      "cuisines": [
+        "Pizza",
+        "Italian"
+      ],
+      "rating": 4.6,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 35,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1024/640/360"
+    },
+    {
+      "id": "r-1025",
+      "name": "Chicken Shack Newlands",
+      "cuisines": [
+        "Chicken",
+        "Peri-Peri"
+      ],
+      "rating": 3.6,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 36,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1025/640/360"
+    },
+    {
+      "id": "r-1026",
+      "name": "Lucky Noodle Claremont",
+      "cuisines": [
+        "Chinese",
+        "Asian"
+      ],
+      "rating": 3.9,
+      "delivery_fee_cents": 2900,
+      "eta_minutes": 47,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1026/640/360"
+    },
+    {
+      "id": "r-1027",
+      "name": "Wasabi",
+      "cuisines": [
+        "Sushi",
+        "Japanese"
+      ],
+      "rating": 3.5,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 34,
+      "is_open": true
+    },
+    {
+      "id": "r-1028",
+      "name": "Salt & Sea",
+      "cuisines": [
+        "Seafood",
+        "Mediterranean"
+      ],
+      "rating": 3.5,
+      "delivery_fee_cents": 2900,
+      "eta_minutes": 31,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1028/640/360"
+    },
+    {
+      "id": "r-1029",
+      "name": "Cape Town Grill Muizenberg",
+      "cuisines": [
+        "Steakhouse",
+        "Grill"
+      ],
+      "rating": 4.7,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 54,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1029/640/360"
+    },
+    {
+      "id": "r-1030",
+      "name": "Daily Bread Observatory",
+      "cuisines": [
+        "Bakery",
+        "Breakfast"
+      ],
+      "rating": 4.0,
+      "delivery_fee_cents": 1500,
+      "eta_minutes": 25,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1030/640/360"
+    },
+    {
+      "id": "r-1031",
+      "name": "Chicken Shack Green Point",
+      "cuisines": [
+        "Chicken",
+        "Peri-Peri"
+      ],
+      "rating": 4.1,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 60,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1031/640/360"
+    },
+    {
+      "id": "r-1032",
+      "name": "Taj Kitchen Green Point",
+      "cuisines": [
+        "Indian",
+        "Curry"
+      ],
+      "rating": 4.6,
+      "delivery_fee_cents": 1800,
+      "eta_minutes": 22,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1032/640/360"
+    },
+    {
+      "id": "r-1033",
+      "name": "Sunrise Cafe Durbanville",
+      "cuisines": [
+        "Bakery",
+        "Breakfast"
+      ],
+      "rating": 3.7,
+      "delivery_fee_cents": 2900,
+      "eta_minutes": 57,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1033/640/360"
+    },
+    {
+      "id": "r-1034",
+      "name": "Catch of the Day Camps Bay",
+      "cuisines": [
+        "Seafood",
+        "Mediterranean"
+      ],
+      "rating": 3.2,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 55,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1034/640/360"
+    },
+    {
+      "id": "r-1035",
+      "name": "Plant Pantry Bellville",
+      "cuisines": [
+        "Healthy",
+        "Vegan"
+      ],
+      "rating": 3.4,
+      "delivery_fee_cents": 1200,
+      "eta_minutes": 52,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1035/640/360"
+    },
+    {
+      "id": "r-1036",
+      "name": "Root & Leaf",
+      "cuisines": [
+        "Healthy",
+        "Vegan"
+      ],
+      "delivery_fee_cents": 1500,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1036/640/360"
+    },
+    {
+      "id": "r-1037",
+      "name": "Wasabi Camps Bay",
+      "cuisines": [
+        "Sushi",
+        "Japanese"
+      ],
+      "rating": 4.0,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 55,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1037/640/360"
+    },
+    {
+      "id": "r-1038",
+      "name": "Daily Greens Durbanville",
+      "cuisines": [
+        "Healthy",
+        "Vegan"
+      ],
+      "rating": 4.0,
+      "delivery_fee_cents": 1800,
+      "eta_minutes": 36,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1038/640/360"
+    },
+    {
+      "id": "r-1039",
+      "name": "Big Stack Durbanville",
+      "cuisines": [
+        "Burgers",
+        "American"
+      ],
+      "rating": 3.7,
+      "delivery_fee_cents": 1500,
+      "eta_minutes": 31,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1039/640/360"
+    },
+    {
+      "id": "r-1040",
+      "name": "Napoli Wood Fire",
+      "cuisines": [
+        "Pizza",
+        "Italian"
+      ],
+      "rating": 4.7,
+      "eta_minutes": 29,
+      "is_open": true,
+      "image_url": null
+    },
+    {
+      "id": "r-1041",
+      "name": "Piri Piri House Camps Bay",
+      "cuisines": [
+        "Chicken",
+        "Peri-Peri"
+      ],
+      "rating": 3.9,
+      "delivery_fee_cents": 1500,
+      "eta_minutes": 15,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1041/640/360"
+    },
+    {
+      "id": "r-1042",
+      "name": "Flame & Fire Sea Point",
+      "cuisines": [
+        "Steakhouse",
+        "Grill"
+      ],
+      "rating": 4.4,
+      "delivery_fee_cents": 3500,
+      "eta_minutes": 32,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1042/640/360"
+    },
+    {
+      "id": "r-1043",
+      "name": "Green Bowl Muizenberg",
+      "cuisines": [
+        "Healthy",
+        "Vegan"
+      ],
+      "rating": 4.5,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 55,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1043/640/360"
+    },
+    {
+      "id": "r-1044",
+      "name": "Kasi Kitchen",
+      "cuisines": [
+        "Traditional",
+        "African"
+      ],
+      "rating": 3.8,
+      "delivery_fee_cents": 1800,
+      "eta_minutes": 58,
+      "is_open": true,
+      "image_url": null
+    },
+    {
+      "id": "r-1045",
+      "name": "Sweet Tooth Newlands",
+      "cuisines": [
+        "Desserts",
+        "Ice Cream"
+      ],
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 53,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1045/640/360"
+    },
+    {
+      "id": "r-1046",
+      "name": "Daily Bread Woodstock",
+      "cuisines": [
+        "Bakery",
+        "Breakfast"
+      ],
+      "rating": 3.6,
+      "delivery_fee_cents": 2900,
+      "eta_minutes": 35,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1046/640/360"
+    },
+    {
+      "id": "r-1047",
+      "name": "Braai Master",
+      "cuisines": [
+        "Steakhouse",
+        "Grill"
+      ],
+      "rating": 3.7,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 32,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1047/640/360"
+    },
+    {
+      "id": "r-1048",
+      "name": "Ubuntu Table Woodstock",
+      "cuisines": [
+        "Traditional",
+        "African"
+      ],
+      "rating": 3.3,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 29,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1048/640/360"
+    },
+    {
+      "id": "r-1049",
+      "name": "Curry Leaf",
+      "cuisines": [
+        "Indian",
+        "Curry"
+      ],
+      "rating": 4.7,
+      "delivery_fee_cents": 1500,
+      "eta_minutes": 49,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1049/640/360"
+    },
+    {
+      "id": "r-1050",
+      "name": "Tokyo Table",
+      "cuisines": [
+        "Sushi",
+        "Japanese"
+      ],
+      "rating": 4.8,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 60,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1050/640/360"
+    },
+    {
+      "id": "r-1051",
+      "name": "Sushi on Camps Bay",
+      "cuisines": [
+        "Sushi",
+        "Japanese"
+      ],
+      "rating": 4.7,
+      "delivery_fee_cents": null,
+      "eta_minutes": 39,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1051/640/360"
+    },
+    {
+      "id": "r-1052",
+      "name": "Daily Bread Sea Point",
+      "cuisines": [
+        "Bakery",
+        "Breakfast"
+      ],
+      "delivery_fee_cents": 1200,
+      "eta_minutes": 25,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1052/640/360"
+    },
+    {
+      "id": "r-1053",
+      "name": "Cake Lab Observatory",
+      "cuisines": [
+        "Desserts",
+        "Ice Cream"
+      ],
+      "rating": null,
+      "delivery_fee_cents": 1800,
+      "eta_minutes": 26,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1053/640/360"
+    },
+    {
+      "id": "r-1054",
+      "name": "Cake Lab",
+      "cuisines": [
+        "Desserts",
+        "Ice Cream"
+      ],
+      "rating": 4.6,
+      "delivery_fee_cents": 1800,
+      "eta_minutes": 22,
+      "is_open": true,
+      "image_url": null
+    },
+    {
+      "id": "r-1055",
+      "name": "The Karoo Grill",
+      "cuisines": [
+        "Steakhouse",
+        "Grill"
+      ],
+      "rating": 4.7,
+      "delivery_fee_cents": 1800,
+      "eta_minutes": 50,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1055/640/360"
+    },
+    {
+      "id": "r-1056",
+      "name": "Delhi Darbar Constantia",
+      "cuisines": [
+        "Indian",
+        "Curry"
+      ],
+      "rating": 3.3,
+      "delivery_fee_cents": 1500,
+      "eta_minutes": 48,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1056/640/360"
+    },
+    {
+      "id": "r-1057",
+      "name": "Peri Palace Green Point",
+      "cuisines": [
+        "Chicken",
+        "Peri-Peri"
+      ],
+      "rating": 4.0,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 46,
+      "is_open": true
+    },
+    {
+      "id": "r-1058",
+      "name": "Big Stack Newlands",
+      "cuisines": [
+        "Burgers",
+        "American"
+      ],
+      "rating": 4.9,
+      "delivery_fee_cents": 1200,
+      "eta_minutes": 36,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1058/640/360"
+    },
+    {
+      "id": "r-1059",
+      "name": "Bamboo House Green Point",
+      "cuisines": [
+        "Chinese",
+        "Asian"
+      ],
+      "rating": 4.5,
+      "delivery_fee_cents": 3500,
+      "eta_minutes": 40,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1059/640/360"
+    },
+    {
+      "id": "r-1060",
+      "name": "Lucky Noodle",
+      "cuisines": [
+        "Chinese",
+        "Asian"
+      ],
+      "rating": 4.7,
+      "delivery_fee_cents": 1800,
+      "eta_minutes": 48,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1060/640/360"
+    },
+    {
+      "id": "r-1061",
+      "name": "Luigi's Camps Bay",
+      "cuisines": [
+        "Pizza",
+        "Italian"
+      ],
+      "rating": 4.6,
+      "delivery_fee_cents": 1500,
+      "eta_minutes": 32,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1061/640/360"
+    },
+    {
+      "id": "r-1062",
+      "name": "Slice of Rome",
+      "cuisines": [
+        "Pizza",
+        "Italian"
+      ],
+      "rating": 4.2,
+      "delivery_fee_cents": 3500,
+      "eta_minutes": 49,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1062/640/360"
+    },
+    {
+      "id": "r-1063",
+      "name": "Fresh Press",
+      "cuisines": [
+        "Healthy",
+        "Vegan"
+      ],
+      "rating": 4.1,
+      "delivery_fee_cents": 1200,
+      "eta_minutes": 28,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1063/640/360"
+    },
+    {
+      "id": "r-1064",
+      "name": "Burger Joint",
+      "cuisines": [
+        "Burgers",
+        "American"
+      ],
+      "rating": 3.6,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 52,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1064/640/360"
+    },
+    {
+      "id": "r-1065",
+      "name": "Smash House",
+      "cuisines": [
+        "Burgers",
+        "American"
+      ],
+      "rating": 4.1,
+      "delivery_fee_cents": 1800,
+      "eta_minutes": 51,
+      "is_open": true
+    },
+    {
+      "id": "r-1066",
+      "name": "Piri Piri House Muizenberg",
+      "cuisines": [
+        "Chicken",
+        "Peri-Peri"
+      ],
+      "rating": 4.5,
+      "delivery_fee_cents": 1200,
+      "eta_minutes": 48,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1066/640/360"
+    },
+    {
+      "id": "r-1067",
+      "name": "Chicken Shack Durbanville",
+      "cuisines": [
+        "Chicken",
+        "Peri-Peri"
+      ],
+      "delivery_fee_cents": 1800,
+      "eta_minutes": 48,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1067/640/360"
+    },
+    {
+      "id": "r-1068",
+      "name": "Sunrise Cafe",
+      "cuisines": [
+        "Bakery",
+        "Breakfast"
+      ],
+      "rating": 4.8,
+      "delivery_fee_cents": 1500,
+      "eta_minutes": 39,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1068/640/360"
+    },
+    {
+      "id": "r-1069",
+      "name": "Coop & Co Bellville",
+      "cuisines": [
+        "Chicken",
+        "Peri-Peri"
+      ],
+      "rating": 4.1,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 59,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1069/640/360"
+    },
+    {
+      "id": "r-1070",
+      "name": "Daily Greens Observatory",
+      "cuisines": [
+        "Healthy",
+        "Vegan"
+      ],
+      "rating": 3.4,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 56,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1070/640/360"
+    },
+    {
+      "id": "r-1071",
+      "name": "Big Stack",
+      "cuisines": [
+        "Burgers",
+        "American"
+      ],
+      "rating": 3.5,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 47,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1071/640/360"
+    },
+    {
+      "id": "r-1072",
+      "name": "Sweet Tooth Woodstock",
+      "cuisines": [
+        "Desserts",
+        "Ice Cream"
+      ],
+      "rating": 3.4,
+      "eta_minutes": 23,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1072/640/360"
+    },
+    {
+      "id": "r-1073",
+      "name": "Cake Lab Constantia",
+      "cuisines": [
+        "Desserts",
+        "Ice Cream"
+      ],
+      "rating": 4.3,
+      "delivery_fee_cents": 3500,
+      "eta_minutes": 59,
+      "is_open": true
+    },
+    {
+      "id": "r-1074",
+      "name": "Napoli Wood Fire Claremont",
+      "cuisines": [
+        "Pizza",
+        "Italian"
+      ],
+      "rating": 3.9,
+      "delivery_fee_cents": 1500,
+      "eta_minutes": 39,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1074/640/360"
+    },
+    {
+      "id": "r-1075",
+      "name": "Flame Chicken",
+      "cuisines": [
+        "Chicken",
+        "Peri-Peri"
+      ],
+      "rating": 4.6,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 40,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1075/640/360"
+    },
+    {
+      "id": "r-1076",
+      "name": "Plant Pantry Newlands",
+      "cuisines": [
+        "Healthy",
+        "Vegan"
+      ],
+      "rating": 4.8,
+      "delivery_fee_cents": 1200,
+      "eta_minutes": 53,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1076/640/360"
+    },
+    {
+      "id": "r-1077",
+      "name": "Peri Palace",
+      "cuisines": [
+        "Chicken",
+        "Peri-Peri"
+      ],
+      "rating": 3.3,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 45,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1077/640/360"
+    },
+    {
+      "id": "r-1078",
+      "name": "Green Bowl",
+      "cuisines": [
+        "Healthy",
+        "Vegan"
+      ],
+      "delivery_fee_cents": 0,
+      "eta_minutes": 32,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1078/640/360"
+    },
+    {
+      "id": "r-1079",
+      "name": "Morning Glory",
+      "cuisines": [
+        "Bakery",
+        "Breakfast"
+      ],
+      "rating": null,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 39,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1079/640/360"
+    },
+    {
+      "id": "r-1080",
+      "name": "Slice of Rome Bellville",
+      "cuisines": [
+        "Pizza",
+        "Italian"
+      ],
+      "rating": 4.0,
+      "delivery_fee_cents": 3500,
+      "eta_minutes": 36,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1080/640/360"
+    },
+    {
+      "id": "r-1081",
+      "name": "Crumb & Co",
+      "cuisines": [
+        "Bakery",
+        "Breakfast"
+      ],
+      "rating": 4.4,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 36,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1081/640/360"
+    },
+    {
+      "id": "r-1082",
+      "name": "Sunrise Cafe Gardens",
+      "cuisines": [
+        "Bakery",
+        "Breakfast"
+      ],
+      "rating": 3.4,
+      "delivery_fee_cents": 1200,
+      "eta_minutes": 44,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1082/640/360"
+    },
+    {
+      "id": "r-1083",
+      "name": "Blue Marlin Green Point",
+      "cuisines": [
+        "Seafood",
+        "Mediterranean"
+      ],
+      "rating": 3.4,
+      "delivery_fee_cents": 3500,
+      "eta_minutes": 55,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1083/640/360"
+    },
+    {
+      "id": "r-1084",
+      "name": "Calamari Corner",
+      "cuisines": [
+        "Seafood",
+        "Mediterranean"
+      ],
+      "rating": 3.7,
+      "delivery_fee_cents": 1200,
+      "eta_minutes": 28,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1084/640/360"
+    },
+    {
+      "id": "r-1085",
+      "name": "Cape Town Grill Bellville",
+      "cuisines": [
+        "Steakhouse",
+        "Grill"
+      ],
+      "rating": 4.8,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 52,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1085/640/360"
+    },
+    {
+      "id": "r-1086",
+      "name": "Kasi Kitchen Newlands",
+      "cuisines": [
+        "Traditional",
+        "African"
+      ],
+      "rating": 4.3,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 37,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1086/640/360"
+    },
+    {
+      "id": "r-1087",
+      "name": "Salt & Sea Observatory",
+      "cuisines": [
+        "Seafood",
+        "Mediterranean"
+      ],
+      "rating": 4.5,
+      "delivery_fee_cents": 2900,
+      "eta_minutes": 35,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1087/640/360"
+    },
+    {
+      "id": "r-1088",
+      "name": "Napoli Wood Fire Constantia",
+      "cuisines": [
+        "Pizza",
+        "Italian"
+      ],
+      "rating": 4.8,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 48,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1088/640/360"
+    },
+    {
+      "id": "r-1089",
+      "name": "Prime Cut",
+      "cuisines": [
+        "Steakhouse",
+        "Grill"
+      ],
+      "rating": 4.6,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 15,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1089/640/360"
+    },
+    {
+      "id": "r-1090",
+      "name": "Il Forno",
+      "cuisines": [
+        "Pizza",
+        "Italian"
+      ],
+      "rating": 4.7,
+      "delivery_fee_cents": 0,
+      "eta_minutes": null,
+      "is_open": true
+    },
+    {
+      "id": "r-1091",
+      "name": "Diner 24",
+      "cuisines": [
+        "Burgers",
+        "American"
+      ],
+      "rating": 3.4,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 60,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1091/640/360"
+    },
+    {
+      "id": "r-1092",
+      "name": "Nori Durbanville",
+      "cuisines": [
+        "Sushi",
+        "Japanese"
+      ],
+      "rating": 4.5,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 15,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1092/640/360"
+    },
+    {
+      "id": "r-1093",
+      "name": "Gogo's Pot Bellville",
+      "cuisines": [
+        "Traditional",
+        "African"
+      ],
+      "rating": 3.2,
+      "delivery_fee_cents": 1500,
+      "eta_minutes": 29,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1093/640/360"
+    },
+    {
+      "id": "r-1094",
+      "name": "Ocean Roll Observatory",
+      "cuisines": [
+        "Sushi",
+        "Japanese"
+      ],
+      "rating": 4.6,
+      "delivery_fee_cents": 2900,
+      "eta_minutes": 24,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1094/640/360"
+    },
+    {
+      "id": "r-1095",
+      "name": "Wok This Way Claremont",
+      "cuisines": [
+        "Chinese",
+        "Asian"
+      ],
+      "rating": 3.5,
+      "delivery_fee_cents": 1500,
+      "eta_minutes": 45,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1095/640/360"
+    },
+    {
+      "id": "r-1096",
+      "name": "Ubuntu Table Sea Point",
+      "cuisines": [
+        "Traditional",
+        "African"
+      ],
+      "rating": 4.5,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 19,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1096/640/360"
+    },
+    {
+      "id": "r-1097",
+      "name": "The Karoo Grill Newlands",
+      "cuisines": [
+        "Steakhouse",
+        "Grill"
+      ],
+      "rating": 3.3,
+      "delivery_fee_cents": 2900,
+      "eta_minutes": 55,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1097/640/360"
+    },
+    {
+      "id": "r-1098",
+      "name": "Peri Palace Claremont",
+      "cuisines": [
+        "Chicken",
+        "Peri-Peri"
+      ],
+      "rating": 4.0,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 22,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1098/640/360"
+    },
+    {
+      "id": "r-1099",
+      "name": "Burger Joint Camps Bay",
+      "cuisines": [
+        "Burgers",
+        "American"
+      ],
+      "rating": 4.2,
+      "delivery_fee_cents": 2900,
+      "eta_minutes": 60,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1099/640/360"
+    },
+    {
+      "id": "r-1100",
+      "name": "Salt & Sea Newlands",
+      "cuisines": [
+        "Seafood",
+        "Mediterranean"
+      ],
+      "rating": 4.7,
+      "delivery_fee_cents": 1800,
+      "eta_minutes": 60,
+      "is_open": false,
+      "image_url": null
+    },
+    {
+      "id": "r-1101",
+      "name": "Plant Pantry Green Point",
+      "cuisines": [
+        "Healthy",
+        "Vegan"
+      ],
+      "rating": 4.0,
+      "delivery_fee_cents": 1800,
+      "eta_minutes": 44,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1101/640/360"
+    },
+    {
+      "id": "r-1102",
+      "name": "Wasabi Green Point",
+      "cuisines": [
+        "Sushi",
+        "Japanese"
+      ],
+      "rating": 4.2,
+      "delivery_fee_cents": 1800,
+      "eta_minutes": 20,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1102/640/360"
+    },
+    {
+      "id": "r-1103",
+      "name": "Patty Co Gardens",
+      "cuisines": [
+        "Burgers",
+        "American"
+      ],
+      "rating": 4.8,
+      "delivery_fee_cents": 1500,
+      "eta_minutes": 57,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1103/640/360"
+    },
+    {
+      "id": "r-1104",
+      "name": "Nori Claremont",
+      "cuisines": [
+        "Sushi",
+        "Japanese"
+      ],
+      "rating": 4.2,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 16,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1104/640/360"
+    },
+    {
+      "id": "r-1105",
+      "name": "Patty Co Woodstock",
+      "cuisines": [
+        "Burgers",
+        "American"
+      ],
+      "rating": 4.7,
+      "delivery_fee_cents": 1800,
+      "eta_minutes": 41,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1105/640/360"
+    },
+    {
+      "id": "r-1106",
+      "name": "Sakura",
+      "cuisines": null,
+      "rating": 3.6,
+      "delivery_fee_cents": 3500,
+      "eta_minutes": 39,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1106/640/360"
+    },
+    {
+      "id": "r-1107",
+      "name": "Fresh Press Green Point",
+      "cuisines": [
+        "Healthy",
+        "Vegan"
+      ],
+      "rating": 3.9,
+      "delivery_fee_cents": 1200,
+      "eta_minutes": 35,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1107/640/360"
+    },
+    {
+      "id": "r-1108",
+      "name": "Mama Africa",
+      "cuisines": [
+        "Traditional",
+        "African"
+      ],
+      "rating": 3.9,
+      "delivery_fee_cents": 3500,
+      "eta_minutes": 28,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1108/640/360"
+    },
+    {
+      "id": "r-1109",
+      "name": "Calamari Corner Muizenberg",
+      "cuisines": [
+        "Seafood",
+        "Mediterranean"
+      ],
+      "rating": 4.4,
+      "delivery_fee_cents": 1200,
+      "eta_minutes": 25,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1109/640/360"
+    },
+    {
+      "id": "r-1110",
+      "name": "Sushi on Observatory",
+      "cuisines": [
+        "Sushi",
+        "Japanese"
+      ],
+      "rating": 4.3,
+      "delivery_fee_cents": 2900,
+      "eta_minutes": 21,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1110/640/360"
+    },
+    {
+      "id": "r-1111",
+      "name": "Big Stack Green Point",
+      "cuisines": [
+        "Burgers",
+        "American"
+      ],
+      "rating": 4.2,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 24,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1111/640/360"
+    },
+    {
+      "id": "r-1112",
+      "name": "Salt & Sea Durbanville",
+      "cuisines": [
+        "Seafood",
+        "Mediterranean"
+      ],
+      "rating": 3.7,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 59,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1112/640/360"
+    },
+    {
+      "id": "r-1113",
+      "name": "Peri Palace Gardens",
+      "cuisines": [
+        "Chicken",
+        "Peri-Peri"
+      ],
+      "rating": 3.9,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 52,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1113/640/360"
+    },
+    {
+      "id": "r-1114",
+      "name": "Nori Sea Point",
+      "cuisines": [
+        "Sushi",
+        "Japanese"
+      ],
+      "rating": 4.3,
+      "delivery_fee_cents": 1800,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1114/640/360"
+    },
+    {
+      "id": "r-1115",
+      "name": "Wok This Way Durbanville",
+      "cuisines": [
+        "Chinese",
+        "Asian"
+      ],
+      "rating": 3.9,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 41,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1115/640/360"
+    },
+    {
+      "id": "r-1116",
+      "name": "Scoop Shop Gardens",
+      "cuisines": [
+        "Desserts",
+        "Ice Cream"
+      ],
+      "rating": 4.5,
+      "delivery_fee_cents": 1800,
+      "eta_minutes": 24,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1116/640/360"
+    },
+    {
+      "id": "r-1117",
+      "name": "Fresh Press Claremont",
+      "cuisines": [
+        "Healthy",
+        "Vegan"
+      ],
+      "rating": 4.1,
+      "delivery_fee_cents": 1200,
+      "eta_minutes": 22,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1117/640/360"
+    },
+    {
+      "id": "r-1118",
+      "name": "Bean There Sea Point",
+      "cuisines": [
+        "Bakery",
+        "Breakfast"
+      ],
+      "rating": 4.9,
+      "delivery_fee_cents": 3500,
+      "eta_minutes": 45,
+      "is_open": null,
+      "image_url": "https://picsum.photos/seed/r-1118/640/360"
+    },
+    {
+      "id": "r-1119",
+      "name": "Spice Route Constantia",
+      "cuisines": [
+        "Indian",
+        "Curry"
+      ],
+      "rating": 3.2,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 37,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1119/640/360"
+    },
+    {
+      "id": "r-1120",
+      "name": "Prime Cut Bellville",
+      "cuisines": [
+        "Steakhouse",
+        "Grill"
+      ],
+      "rating": 3.4,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 51,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1120/640/360"
+    },
+    {
+      "id": "r-1121",
+      "name": "Sugar Rush",
+      "cuisines": [
+        "Desserts",
+        "Ice Cream"
+      ],
+      "rating": 3.8,
+      "delivery_fee_cents": 1200,
+      "eta_minutes": 46,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1121/640/360"
+    },
+    {
+      "id": "r-1122",
+      "name": "Bean There",
+      "cuisines": [
+        "Bakery",
+        "Breakfast"
+      ],
+      "rating": 4.5,
+      "delivery_fee_cents": 2900,
+      "eta_minutes": 46,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1122/640/360"
+    },
+    {
+      "id": "r-1123",
+      "name": "Smash House Muizenberg",
+      "cuisines": [
+        "Burgers",
+        "American"
+      ],
+      "delivery_fee_cents": 2900,
+      "eta_minutes": 17,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1123/640/360"
+    },
+    {
+      "id": "r-1124",
+      "name": "Crumb & Co Claremont",
+      "cuisines": [
+        "Bakery",
+        "Breakfast"
+      ],
+      "rating": 3.4,
+      "delivery_fee_cents": 3500,
+      "eta_minutes": 17,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1124/640/360"
+    },
+    {
+      "id": "r-1125",
+      "name": "Chicken Shack Gardens",
+      "cuisines": [
+        "Chicken",
+        "Peri-Peri"
+      ],
+      "rating": 3.9,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 44,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1125/640/360"
+    },
+    {
+      "id": "r-1126",
+      "name": "Golden Dragon Camps Bay",
+      "cuisines": [
+        "Chinese",
+        "Asian"
+      ],
+      "rating": 4.2,
+      "delivery_fee_cents": null,
+      "eta_minutes": 42,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1126/640/360"
+    },
+    {
+      "id": "r-1127",
+      "name": "Scoop Shop Observatory",
+      "cuisines": [
+        "Desserts",
+        "Ice Cream"
+      ],
+      "rating": 4.2,
+      "delivery_fee_cents": 1200,
+      "eta_minutes": 15,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1127/640/360"
+    },
+    {
+      "id": "r-1128",
+      "name": "Morning Glory Observatory",
+      "cuisines": [
+        "Bakery",
+        "Breakfast"
+      ],
+      "rating": 3.7,
+      "delivery_fee_cents": 3500,
+      "eta_minutes": 24,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1128/640/360"
+    },
+    {
+      "id": "r-1129",
+      "name": "Mzansi Soul Kitchen Bellville",
+      "cuisines": [
+        "Traditional",
+        "African"
+      ],
+      "rating": 4.3,
+      "delivery_fee_cents": 0,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1129/640/360"
+    },
+    {
+      "id": "r-1130",
+      "name": "Bun & Beef Bellville",
+      "cuisines": [
+        "Burgers",
+        "American"
+      ],
+      "rating": 3.7,
+      "delivery_fee_cents": 3500,
+      "eta_minutes": 28,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1130/640/360"
+    },
+    {
+      "id": "r-1131",
+      "name": "Catch of the Day",
+      "cuisines": [
+        "Seafood",
+        "Mediterranean"
+      ],
+      "delivery_fee_cents": 1800,
+      "eta_minutes": 38,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1131/640/360"
+    },
+    {
+      "id": "r-1132",
+      "name": "Lucky Noodle Woodstock",
+      "cuisines": [
+        "Chinese",
+        "Asian"
+      ],
+      "rating": 3.4,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 31,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1132/640/360"
+    },
+    {
+      "id": "r-1133",
+      "name": "Smash House Woodstock",
+      "rating": 3.7,
+      "delivery_fee_cents": 2900,
+      "eta_minutes": 22,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1133/640/360"
+    },
+    {
+      "id": "r-1134",
+      "name": "Scoop Shop",
+      "cuisines": [
+        "Desserts",
+        "Ice Cream"
+      ],
+      "rating": 4.6,
+      "delivery_fee_cents": 1800,
+      "eta_minutes": 59,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1134/640/360"
+    },
+    {
+      "id": "r-1135",
+      "name": "Fresh Press Woodstock",
+      "cuisines": [
+        "Healthy",
+        "Vegan"
+      ],
+      "rating": 4.4,
+      "delivery_fee_cents": 1200,
+      "eta_minutes": 29,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1135/640/360"
+    },
+    {
+      "id": "r-1136",
+      "name": "Bun & Beef",
+      "cuisines": [
+        "Burgers",
+        "American"
+      ],
+      "rating": 4.2,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 26,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1136/640/360"
+    },
+    {
+      "id": "r-1137",
+      "name": "Bamboo House Sea Point",
+      "cuisines": [
+        "Chinese",
+        "Asian"
+      ],
+      "rating": 4.1,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 37,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1137/640/360"
+    },
+    {
+      "id": "r-1138",
+      "name": "Flame Chicken Woodstock",
+      "cuisines": [
+        "Chicken",
+        "Peri-Peri"
+      ],
+      "rating": 4.0,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 50,
+      "is_open": false
+    },
+    {
+      "id": "r-1139",
+      "name": "Golden Dragon Observatory",
+      "cuisines": [
+        "Chinese",
+        "Asian"
+      ],
+      "rating": 3.3,
+      "delivery_fee_cents": 2900,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1139/640/360"
+    },
+    {
+      "id": "r-1140",
+      "name": "Calamari Corner Woodstock",
+      "cuisines": [
+        "Seafood",
+        "Mediterranean"
+      ],
+      "rating": 4.3,
+      "delivery_fee_cents": 1500,
+      "eta_minutes": 37,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1140/640/360"
+    },
+    {
+      "id": "r-1141",
+      "name": "Braai Master Woodstock",
+      "cuisines": [
+        "Steakhouse",
+        "Grill"
+      ],
+      "rating": 3.5,
+      "delivery_fee_cents": 1500,
+      "eta_minutes": 35,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1141/640/360"
+    },
+    {
+      "id": "r-1142",
+      "name": "Root & Leaf Bellville",
+      "cuisines": [
+        "Healthy",
+        "Vegan"
+      ],
+      "rating": 4.7,
+      "delivery_fee_cents": 1800,
+      "eta_minutes": 60,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1142/640/360"
+    },
+    {
+      "id": "r-1143",
+      "name": "Sunrise Cafe Claremont",
+      "cuisines": [
+        "Bakery",
+        "Breakfast"
+      ],
+      "rating": 4.3,
+      "delivery_fee_cents": 3500,
+      "eta_minutes": 38,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1143/640/360"
+    },
+    {
+      "id": "r-1144",
+      "name": "Root & Leaf Constantia",
+      "cuisines": [
+        "Healthy",
+        "Vegan"
+      ],
+      "rating": 3.4,
+      "delivery_fee_cents": 1800,
+      "eta_minutes": 23,
+      "is_open": true
+    },
+    {
+      "id": "r-1145",
+      "name": "Daily Greens Sea Point",
+      "cuisines": [
+        "Healthy",
+        "Vegan"
+      ],
+      "rating": 4.8,
+      "eta_minutes": 45,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1145/640/360"
+    },
+    {
+      "id": "r-1146",
+      "name": "Smash House Constantia",
+      "cuisines": [
+        "Burgers",
+        "American"
+      ],
+      "rating": 3.7,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 17,
+      "is_open": true
+    },
+    {
+      "id": "r-1147",
+      "name": "Delhi Darbar Gardens",
+      "cuisines": [
+        "Indian",
+        "Curry"
+      ],
+      "rating": 4.7,
+      "delivery_fee_cents": 1200,
+      "eta_minutes": 36,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1147/640/360"
+    },
+    {
+      "id": "r-1148",
+      "name": "Sunrise Cafe Newlands",
+      "cuisines": [
+        "Bakery",
+        "Breakfast"
+      ],
+      "rating": 3.3,
+      "delivery_fee_cents": 2900,
+      "eta_minutes": 54,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1148/640/360"
+    },
+    {
+      "id": "r-1149",
+      "name": "Piri Piri House Sea Point",
+      "cuisines": [
+        "Chicken",
+        "Peri-Peri"
+      ],
+      "rating": 4.5,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 49,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1149/640/360"
+    },
+    {
+      "id": "r-1150",
+      "name": "Jade Garden Gardens",
+      "cuisines": [
+        "Chinese",
+        "Asian"
+      ],
+      "rating": 3.8,
+      "delivery_fee_cents": 2900,
+      "eta_minutes": 23,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1150/640/360"
+    },
+    {
+      "id": "r-1151",
+      "name": "Sweet Tooth Claremont",
+      "cuisines": null,
+      "rating": 3.7,
+      "delivery_fee_cents": 1800,
+      "eta_minutes": 48,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1151/640/360"
+    },
+    {
+      "id": "r-1152",
+      "name": "Blue Marlin Sea Point",
+      "cuisines": [
+        "Seafood",
+        "Mediterranean"
+      ],
+      "rating": 3.3,
+      "delivery_fee_cents": 2900,
+      "eta_minutes": 58,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1152/640/360"
+    },
+    {
+      "id": "r-1153",
+      "name": "Green Bowl Durbanville",
+      "cuisines": [
+        "Healthy",
+        "Vegan"
+      ],
+      "rating": 3.6,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 29,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1153/640/360"
+    },
+    {
+      "id": "r-1154",
+      "name": "Root & Leaf Woodstock",
+      "cuisines": [
+        "Healthy",
+        "Vegan"
+      ],
+      "rating": 4.1,
+      "delivery_fee_cents": 3500,
+      "eta_minutes": 35,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1154/640/360"
+    },
+    {
+      "id": "r-1155",
+      "name": "Daily Greens Muizenberg",
+      "cuisines": [
+        "Healthy",
+        "Vegan"
+      ],
+      "rating": 4.4,
+      "delivery_fee_cents": 1200,
+      "eta_minutes": 21,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1155/640/360"
+    },
+    {
+      "id": "r-1156",
+      "name": "Scoop Shop Durbanville",
+      "cuisines": [
+        "Desserts",
+        "Ice Cream"
+      ],
+      "rating": null,
+      "delivery_fee_cents": 2200,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1156/640/360"
+    },
+    {
+      "id": "r-1157",
+      "name": "Slice of Rome Sea Point",
+      "cuisines": [
+        "Pizza",
+        "Italian"
+      ],
+      "rating": 3.2,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 35,
+      "is_open": false,
+      "image_url": null
+    },
+    {
+      "id": "r-1158",
+      "name": "Patty Co Muizenberg",
+      "cuisines": [
+        "Burgers",
+        "American"
+      ],
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 16,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1158/640/360"
+    },
+    {
+      "id": "r-1159",
+      "name": "Ubuntu Table Claremont",
+      "cuisines": [
+        "Traditional",
+        "African"
+      ],
+      "rating": 4.6,
+      "delivery_fee_cents": 1500,
+      "is_open": false,
+      "image_url": null
+    },
+    {
+      "id": "r-1160",
+      "name": "Sakura Claremont",
+      "cuisines": [
+        "Sushi",
+        "Japanese"
+      ],
+      "rating": 3.9,
+      "delivery_fee_cents": 1800,
+      "eta_minutes": 46,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1160/640/360"
+    },
+    {
+      "id": "r-1161",
+      "name": "Smokehouse Durbanville",
+      "cuisines": [
+        "Steakhouse",
+        "Grill"
+      ],
+      "rating": 3.7,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 33,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1161/640/360"
+    },
+    {
+      "id": "r-1162",
+      "name": "Calamari Corner Claremont",
+      "cuisines": [
+        "Seafood",
+        "Mediterranean"
+      ],
+      "rating": 4.6,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 31,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1162/640/360"
+    },
+    {
+      "id": "r-1163",
+      "name": "Flame & Fire Claremont",
+      "cuisines": [
+        "Steakhouse",
+        "Grill"
+      ],
+      "rating": 4.6,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 54,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1163/640/360"
+    },
+    {
+      "id": "r-1164",
+      "name": "Kasi Kitchen Observatory",
+      "cuisines": [
+        "Traditional",
+        "African"
+      ],
+      "rating": 4.1,
+      "delivery_fee_cents": 3500,
+      "eta_minutes": 32,
+      "is_open": true
+    },
+    {
+      "id": "r-1165",
+      "name": "Masala Bay Durbanville",
+      "cuisines": [
+        "Indian",
+        "Curry"
+      ],
+      "rating": null,
+      "delivery_fee_cents": 1500,
+      "eta_minutes": 16,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1165/640/360"
+    },
+    {
+      "id": "r-1166",
+      "name": "Taj Kitchen Bellville",
+      "cuisines": [
+        "Indian",
+        "Curry"
+      ],
+      "rating": 4.6,
+      "delivery_fee_cents": 3500,
+      "eta_minutes": 57,
+      "is_open": true,
+      "image_url": null
+    },
+    {
+      "id": "r-1167",
+      "name": "Green Bowl Bellville",
+      "cuisines": [
+        "Healthy",
+        "Vegan"
+      ],
+      "rating": 4.4,
+      "delivery_fee_cents": 1200,
+      "eta_minutes": 43,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1167/640/360"
+    },
+    {
+      "id": "r-1168",
+      "name": "Smokehouse Bellville",
+      "cuisines": [
+        "Steakhouse",
+        "Grill"
+      ],
+      "rating": 3.4,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 50,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1168/640/360"
+    },
+    {
+      "id": "r-1169",
+      "name": "Masala Bay Claremont",
+      "cuisines": [
+        "Indian",
+        "Curry"
+      ],
+      "rating": 4.1,
+      "delivery_fee_cents": 1200,
+      "eta_minutes": 31,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1169/640/360"
+    },
+    {
+      "id": "r-1170",
+      "name": "Golden Dragon Muizenberg",
+      "cuisines": [
+        "Chinese",
+        "Asian"
+      ],
+      "rating": 4.1,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 20,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1170/640/360"
+    },
+    {
+      "id": "r-1171",
+      "name": "Harbour Fish Woodstock",
+      "cuisines": [
+        "Seafood",
+        "Mediterranean"
+      ],
+      "rating": 4.3,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 26,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1171/640/360"
+    },
+    {
+      "id": "r-1172",
+      "name": "Bella Italia Constantia",
+      "cuisines": [
+        "Pizza",
+        "Italian"
+      ],
+      "rating": 4.2,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 20,
+      "is_open": true,
+      "image_url": null
+    },
+    {
+      "id": "r-1173",
+      "name": "Bean There Bellville",
+      "cuisines": [
+        "Bakery",
+        "Breakfast"
+      ],
+      "rating": 4.5,
+      "delivery_fee_cents": 2900,
+      "eta_minutes": 60,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1173/640/360"
+    },
+    {
+      "id": "r-1174",
+      "name": "Luigi's Woodstock",
+      "cuisines": [
+        "Pizza",
+        "Italian"
+      ],
+      "rating": 4.6,
+      "delivery_fee_cents": 1800,
+      "eta_minutes": null,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1174/640/360"
+    },
+    {
+      "id": "r-1175",
+      "name": "Big Stack Gardens",
+      "cuisines": [
+        "Burgers",
+        "American"
+      ],
+      "rating": 3.5,
+      "delivery_fee_cents": 1200,
+      "eta_minutes": 29,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1175/640/360"
+    },
+    {
+      "id": "r-1176",
+      "name": "Mzansi Soul Kitchen Gardens",
+      "cuisines": [
+        "Traditional",
+        "African"
+      ],
+      "rating": 4.1,
+      "delivery_fee_cents": 1200,
+      "eta_minutes": 34,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1176/640/360"
+    },
+    {
+      "id": "r-1177",
+      "name": "Masala Bay",
+      "cuisines": [
+        "Indian",
+        "Curry"
+      ],
+      "rating": 4.8,
+      "delivery_fee_cents": 1500,
+      "eta_minutes": 26,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1177/640/360"
+    },
+    {
+      "id": "r-1178",
+      "name": "Gogo's Pot",
+      "cuisines": [
+        "Traditional",
+        "African"
+      ],
+      "rating": 4.7,
+      "delivery_fee_cents": 1200,
+      "eta_minutes": 50,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1178/640/360"
+    },
+    {
+      "id": "r-1179",
+      "name": "Mzansi Soul Kitchen",
+      "cuisines": [
+        "Traditional",
+        "African"
+      ],
+      "rating": 3.4,
+      "delivery_fee_cents": 1800,
+      "eta_minutes": 54,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1179/640/360"
+    },
+    {
+      "id": "r-1180",
+      "name": "Napoli Wood Fire Gardens",
+      "cuisines": [
+        "Pizza",
+        "Italian"
+      ],
+      "rating": 4.4,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 18,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1180/640/360"
+    },
+    {
+      "id": "r-1181",
+      "name": "Patty Co",
+      "cuisines": [
+        "Burgers",
+        "American"
+      ],
+      "rating": 4.5,
+      "delivery_fee_cents": 1500,
+      "eta_minutes": 46,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1181/640/360"
+    },
+    {
+      "id": "r-1182",
+      "name": "Spice Route Woodstock",
+      "cuisines": [
+        "Indian",
+        "Curry"
+      ],
+      "rating": 3.5,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 55,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1182/640/360"
+    },
+    {
+      "id": "r-1183",
+      "name": "Peri Palace Muizenberg",
+      "cuisines": [
+        "Chicken",
+        "Peri-Peri"
+      ],
+      "rating": 4.0,
+      "delivery_fee_cents": 2900,
+      "eta_minutes": 32,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1183/640/360"
+    },
+    {
+      "id": "r-1184",
+      "name": "Lucky Noodle Constantia",
+      "cuisines": [
+        "Chinese",
+        "Asian"
+      ],
+      "rating": 4.0,
+      "delivery_fee_cents": 1800,
+      "eta_minutes": 20,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1184/640/360"
+    },
+    {
+      "id": "r-1185",
+      "name": "Ubuntu Table",
+      "cuisines": [
+        "Traditional",
+        "African"
+      ],
+      "rating": 3.3,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 31,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1185/640/360"
+    },
+    {
+      "id": "r-1186",
+      "name": "Piri Piri House",
+      "cuisines": [
+        "Chicken",
+        "Peri-Peri"
+      ],
+      "rating": 4.4,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 18,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1186/640/360"
+    },
+    {
+      "id": "r-1187",
+      "name": "Braai Master Green Point",
+      "cuisines": [
+        "Steakhouse",
+        "Grill"
+      ],
+      "rating": 3.2,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 59,
+      "is_open": true
+    },
+    {
+      "id": "r-1188",
+      "name": "Gogo's Pot Sea Point",
+      "cuisines": [
+        "Traditional",
+        "African"
+      ],
+      "rating": 4.4,
+      "delivery_fee_cents": 2200,
+      "is_open": true,
+      "image_url": null
+    },
+    {
+      "id": "r-1189",
+      "name": "Cake Lab Camps Bay",
+      "cuisines": [
+        "Desserts",
+        "Ice Cream"
+      ],
+      "rating": 4.3,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 48,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1189/640/360"
+    },
+    {
+      "id": "r-1190",
+      "name": "Daily Bread Claremont",
+      "cuisines": [
+        "Bakery",
+        "Breakfast"
+      ],
+      "rating": 4.1,
+      "delivery_fee_cents": 2900,
+      "eta_minutes": 25,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1190/640/360"
+    },
+    {
+      "id": "r-1191",
+      "name": "Mzansi Soul Kitchen Muizenberg",
+      "cuisines": [
+        "Traditional",
+        "African"
+      ],
+      "rating": 3.4,
+      "delivery_fee_cents": 2900,
+      "eta_minutes": 55,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1191/640/360"
+    },
+    {
+      "id": "r-1192",
+      "name": "Smokehouse Woodstock",
+      "cuisines": [
+        "Steakhouse",
+        "Grill"
+      ],
+      "rating": 4.3,
+      "delivery_fee_cents": 1800,
+      "eta_minutes": 34,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1192/640/360"
+    },
+    {
+      "id": "r-1193",
+      "name": "Diner 24 Durbanville",
+      "cuisines": [
+        "Burgers",
+        "American"
+      ],
+      "rating": 4.0,
+      "delivery_fee_cents": 1800,
+      "eta_minutes": 45,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1193/640/360"
+    },
+    {
+      "id": "r-1194",
+      "name": "Bamboo House",
+      "cuisines": [
+        "Chinese",
+        "Asian"
+      ],
+      "rating": 3.8,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 36,
+      "is_open": true,
+      "image_url": null
+    },
+    {
+      "id": "r-1195",
+      "name": "Wasabi Newlands",
+      "cuisines": [
+        "Sushi",
+        "Japanese"
+      ],
+      "rating": 3.6,
+      "delivery_fee_cents": 2900,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1195/640/360"
+    },
+    {
+      "id": "r-1196",
+      "name": "Masala Bay Gardens",
+      "cuisines": [
+        "Indian",
+        "Curry"
+      ],
+      "rating": 3.2,
+      "delivery_fee_cents": 2900,
+      "eta_minutes": 31,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1196/640/360"
+    },
+    {
+      "id": "r-1197",
+      "name": "Cake Lab Gardens",
+      "cuisines": [
+        "Desserts",
+        "Ice Cream"
+      ],
+      "rating": 4.8,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 50,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1197/640/360"
+    },
+    {
+      "id": "r-1198",
+      "name": "Sushi on Bellville",
+      "cuisines": [
+        "Sushi",
+        "Japanese"
+      ],
+      "rating": 3.6,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 52,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1198/640/360"
+    },
+    {
+      "id": "r-1199",
+      "name": "Mama Africa Claremont",
+      "cuisines": [
+        "Traditional",
+        "African"
+      ],
+      "rating": 3.8,
+      "delivery_fee_cents": 3500,
+      "eta_minutes": 45,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1199/640/360"
+    },
+    {
+      "id": "r-1200",
+      "name": "Lucky Noodle Durbanville",
+      "cuisines": [
+        "Chinese",
+        "Asian"
+      ],
+      "rating": null,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 30,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1200/640/360"
+    },
+    {
+      "id": "r-1201",
+      "name": "Curry Leaf Newlands",
+      "cuisines": [
+        "Indian",
+        "Curry"
+      ],
+      "rating": 4.8,
+      "delivery_fee_cents": 2900,
+      "eta_minutes": 29,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1201/640/360"
+    },
+    {
+      "id": "r-1202",
+      "name": "Peri Palace Constantia",
+      "cuisines": [
+        "Chicken",
+        "Peri-Peri"
+      ],
+      "rating": 3.3,
+      "delivery_fee_cents": 1800,
+      "eta_minutes": 19,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1202/640/360"
+    },
+    {
+      "id": "r-1203",
+      "name": "Curry Leaf Observatory",
+      "cuisines": [
+        "Indian",
+        "Curry"
+      ],
+      "rating": null,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 45,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1203/640/360"
+    },
+    {
+      "id": "r-1204",
+      "name": "Fresh Press Newlands",
+      "cuisines": [
+        "Healthy",
+        "Vegan"
+      ],
+      "rating": 4.7,
+      "delivery_fee_cents": 1800,
+      "eta_minutes": 33,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1204/640/360"
+    },
+    {
+      "id": "r-1205",
+      "name": "Cape Town Grill Observatory",
+      "cuisines": [
+        "Steakhouse",
+        "Grill"
+      ],
+      "rating": 3.8,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 24,
+      "is_open": true
+    },
+    {
+      "id": "r-1206",
+      "name": "Mama Africa Gardens",
+      "cuisines": [
+        "Traditional",
+        "African"
+      ],
+      "rating": 4.6,
+      "delivery_fee_cents": 1500,
+      "eta_minutes": 32,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1206/640/360"
+    },
+    {
+      "id": "r-1207",
+      "name": "Napoli Wood Fire Muizenberg",
+      "cuisines": [
+        "Pizza",
+        "Italian"
+      ],
+      "rating": 4.2,
+      "delivery_fee_cents": 1200,
+      "eta_minutes": 51,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1207/640/360"
+    },
+    {
+      "id": "r-1208",
+      "name": "Coop & Co",
+      "cuisines": [
+        "Chicken",
+        "Peri-Peri"
+      ],
+      "rating": 4.6,
+      "delivery_fee_cents": 3500,
+      "eta_minutes": 46,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1208/640/360"
+    },
+    {
+      "id": "r-1209",
+      "name": "Blue Marlin Observatory",
+      "cuisines": [
+        "Seafood",
+        "Mediterranean"
+      ],
+      "rating": 4.8,
+      "delivery_fee_cents": 3500,
+      "eta_minutes": 55,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1209/640/360"
+    },
+    {
+      "id": "r-1210",
+      "name": "Harbour Fish Claremont",
+      "cuisines": [
+        "Seafood",
+        "Mediterranean"
+      ],
+      "rating": 3.8,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 42,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1210/640/360"
+    },
+    {
+      "id": "r-1211",
+      "name": "Mama Africa Woodstock",
+      "cuisines": [
+        "Traditional",
+        "African"
+      ],
+      "rating": 4.8,
+      "delivery_fee_cents": 3500,
+      "eta_minutes": null,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1211/640/360"
+    },
+    {
+      "id": "r-1212",
+      "name": "Spice Route Claremont",
+      "rating": 4.5,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 20,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1212/640/360"
+    },
+    {
+      "id": "r-1213",
+      "name": "Napoli Wood Fire Observatory",
+      "cuisines": [
+        "Pizza",
+        "Italian"
+      ],
+      "rating": 4.3,
+      "delivery_fee_cents": 1500,
+      "eta_minutes": 24,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1213/640/360"
+    },
+    {
+      "id": "r-1214",
+      "name": "Peri Palace Woodstock",
+      "cuisines": [
+        "Chicken",
+        "Peri-Peri"
+      ],
+      "rating": 4.0,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 60,
+      "is_open": true
+    },
+    {
+      "id": "r-1215",
+      "name": "Lucky Noodle Camps Bay",
+      "cuisines": [
+        "Chinese",
+        "Asian"
+      ],
+      "rating": 4.1,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 44,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1215/640/360"
+    },
+    {
+      "id": "r-1216",
+      "name": "Daily Greens Claremont",
+      "cuisines": [
+        "Healthy",
+        "Vegan"
+      ],
+      "rating": 3.3,
+      "delivery_fee_cents": 1800,
+      "eta_minutes": 50,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1216/640/360"
+    },
+    {
+      "id": "r-1217",
+      "name": "Tokyo Table Claremont",
+      "cuisines": [
+        "Sushi",
+        "Japanese"
+      ],
+      "rating": 4.4,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 18,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1217/640/360"
+    },
+    {
+      "id": "r-1218",
+      "name": "Green Bowl Gardens",
+      "cuisines": [
+        "Healthy",
+        "Vegan"
+      ],
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 24,
+      "image_url": "https://picsum.photos/seed/r-1218/640/360"
+    },
+    {
+      "id": "r-1219",
+      "name": "Tokyo Table Constantia",
+      "cuisines": [
+        "Sushi",
+        "Japanese"
+      ],
+      "rating": 4.7,
+      "delivery_fee_cents": 1500,
+      "eta_minutes": 22,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1219/640/360"
+    },
+    {
+      "id": "r-1220",
+      "name": "Ocean Roll",
+      "cuisines": [
+        "Sushi",
+        "Japanese"
+      ],
+      "rating": 4.7,
+      "delivery_fee_cents": 1200,
+      "eta_minutes": 32,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1220/640/360"
+    },
+    {
+      "id": "r-1221",
+      "name": "Piri Piri House Green Point",
+      "cuisines": [
+        "Chicken",
+        "Peri-Peri"
+      ],
+      "rating": 4.4,
+      "delivery_fee_cents": 1800,
+      "eta_minutes": 30,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1221/640/360"
+    },
+    {
+      "id": "r-1222",
+      "name": "Flame & Fire Muizenberg",
+      "cuisines": [
+        "Steakhouse",
+        "Grill"
+      ],
+      "rating": 4.0,
+      "delivery_fee_cents": null,
+      "eta_minutes": 30,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1222/640/360"
+    },
+    {
+      "id": "r-1223",
+      "name": "Smokehouse",
+      "cuisines": [
+        "Steakhouse",
+        "Grill"
+      ],
+      "rating": 4.8,
+      "delivery_fee_cents": 2900,
+      "eta_minutes": 20,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1223/640/360"
+    },
+    {
+      "id": "r-1224",
+      "name": "Peri Palace Newlands",
+      "cuisines": [
+        "Chicken",
+        "Peri-Peri"
+      ],
+      "rating": 4.5,
+      "delivery_fee_cents": 2900,
+      "eta_minutes": 26,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1224/640/360"
+    },
+    {
+      "id": "r-1225",
+      "name": "Luigi's Observatory",
+      "cuisines": [
+        "Pizza",
+        "Italian"
+      ],
+      "rating": 4.6,
+      "delivery_fee_cents": 1800,
+      "eta_minutes": 54,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1225/640/360"
+    },
+    {
+      "id": "r-1226",
+      "name": "Catch of the Day Constantia",
+      "cuisines": [
+        "Seafood",
+        "Mediterranean"
+      ],
+      "rating": 4.9,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 31,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1226/640/360"
+    },
+    {
+      "id": "r-1227",
+      "name": "Burger Joint Gardens",
+      "cuisines": [
+        "Burgers",
+        "American"
+      ],
+      "rating": 4.8,
+      "delivery_fee_cents": 1500,
+      "eta_minutes": 50,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1227/640/360"
+    },
+    {
+      "id": "r-1228",
+      "name": "Mama Africa Durbanville",
+      "cuisines": [
+        "Traditional",
+        "African"
+      ],
+      "rating": 4.6,
+      "delivery_fee_cents": 1200,
+      "eta_minutes": 49,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1228/640/360"
+    },
+    {
+      "id": "r-1229",
+      "name": "Fresh Press Constantia",
+      "cuisines": [
+        "Healthy",
+        "Vegan"
+      ],
+      "rating": 4.0,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 56,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1229/640/360"
+    },
+    {
+      "id": "r-1230",
+      "name": "Jade Garden Green Point",
+      "cuisines": [
+        "Chinese",
+        "Asian"
+      ],
+      "rating": 4.5,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 42,
+      "is_open": true,
+      "image_url": null
+    },
+    {
+      "id": "r-1231",
+      "name": "Green Bowl Observatory",
+      "cuisines": [
+        "Healthy",
+        "Vegan"
+      ],
+      "rating": 3.5,
+      "delivery_fee_cents": 1800,
+      "eta_minutes": 36,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1231/640/360"
+    },
+    {
+      "id": "r-1232",
+      "name": "Taj Kitchen",
+      "cuisines": [
+        "Indian",
+        "Curry"
+      ],
+      "rating": 4.6,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": null,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1232/640/360"
+    },
+    {
+      "id": "r-1233",
+      "name": "Catch of the Day Muizenberg",
+      "cuisines": [
+        "Seafood",
+        "Mediterranean"
+      ],
+      "rating": 4.7,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 36,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1233/640/360"
+    },
+    {
+      "id": "r-1234",
+      "name": "Crumb & Co Gardens",
+      "cuisines": [
+        "Bakery",
+        "Breakfast"
+      ],
+      "rating": 4.0,
+      "delivery_fee_cents": 1200,
+      "eta_minutes": 43,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1234/640/360"
+    },
+    {
+      "id": "r-1235",
+      "name": "Sweet Tooth Green Point",
+      "cuisines": [
+        "Desserts",
+        "Ice Cream"
+      ],
+      "rating": 4.2,
+      "delivery_fee_cents": 1800,
+      "eta_minutes": 49,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1235/640/360"
+    },
+    {
+      "id": "r-1236",
+      "name": "Flame & Fire",
+      "cuisines": [
+        "Steakhouse",
+        "Grill"
+      ],
+      "rating": 4.1,
+      "delivery_fee_cents": 1800,
+      "eta_minutes": 46,
+      "is_open": true,
+      "image_url": null
+    },
+    {
+      "id": "r-1237",
+      "name": "Lucky Noodle Gardens",
+      "cuisines": [
+        "Chinese",
+        "Asian"
+      ],
+      "rating": 3.4,
+      "delivery_fee_cents": 2900,
+      "eta_minutes": 46,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1237/640/360"
+    },
+    {
+      "id": "r-1238",
+      "name": "Tokyo Table Durbanville",
+      "cuisines": [
+        "Sushi",
+        "Japanese"
+      ],
+      "rating": 3.5,
+      "delivery_fee_cents": 1200,
+      "eta_minutes": 33,
+      "is_open": false,
+      "image_url": null
+    },
+    {
+      "id": "r-1239",
+      "name": "Wasabi Claremont",
+      "cuisines": [
+        "Sushi",
+        "Japanese"
+      ],
+      "rating": 3.4,
+      "delivery_fee_cents": 1500,
+      "eta_minutes": 21,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1239/640/360"
+    },
+    {
+      "id": "r-1240",
+      "name": "The Karoo Grill Bellville",
+      "cuisines": [
+        "Steakhouse",
+        "Grill"
+      ],
+      "rating": 3.9,
+      "delivery_fee_cents": 1500,
+      "eta_minutes": 28,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1240/640/360"
+    },
+    {
+      "id": "r-1241",
+      "name": "Cake Lab Claremont",
+      "cuisines": [
+        "Desserts",
+        "Ice Cream"
+      ],
+      "rating": 3.2,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 48,
+      "is_open": true
+    },
+    {
+      "id": "r-1242",
+      "name": "Jade Garden Constantia",
+      "cuisines": [
+        "Chinese",
+        "Asian"
+      ],
+      "rating": 3.3,
+      "delivery_fee_cents": 3500,
+      "eta_minutes": 30,
+      "is_open": true
+    },
+    {
+      "id": "r-1243",
+      "name": "Peri Palace Bellville",
+      "cuisines": [
+        "Chicken",
+        "Peri-Peri"
+      ],
+      "rating": 3.2,
+      "delivery_fee_cents": 1200,
+      "eta_minutes": 30,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1243/640/360"
+    },
+    {
+      "id": "r-1244",
+      "name": "Cake Lab Durbanville",
+      "cuisines": [
+        "Desserts",
+        "Ice Cream"
+      ],
+      "rating": 3.8,
+      "delivery_fee_cents": 2900,
+      "eta_minutes": 33,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1244/640/360"
+    },
+    {
+      "id": "r-1245",
+      "name": "Flame & Fire Green Point",
+      "cuisines": [
+        "Steakhouse",
+        "Grill"
+      ],
+      "rating": 4.8,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 43,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1245/640/360"
+    },
+    {
+      "id": "r-1246",
+      "name": "Sushi on Claremont",
+      "cuisines": [
+        "Sushi",
+        "Japanese"
+      ],
+      "rating": 4.0,
+      "delivery_fee_cents": 1800,
+      "eta_minutes": 27,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1246/640/360"
+    },
+    {
+      "id": "r-1247",
+      "name": "Mzansi Soul Kitchen Camps Bay",
+      "cuisines": [
+        "Traditional",
+        "African"
+      ],
+      "rating": 4.1,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 17,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1247/640/360"
+    },
+    {
+      "id": "r-1248",
+      "name": "Slice of Rome Green Point",
+      "cuisines": [
+        "Pizza",
+        "Italian"
+      ],
+      "rating": 3.8,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": null,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r-1248/640/360"
+    },
+    {
+      "id": "r-1249",
+      "name": "Daily Greens Woodstock",
+      "cuisines": [
+        "Healthy",
+        "Vegan"
+      ],
+      "rating": 4.5,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 38,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r-1249/640/360"
+    },
+    {
+      "id": "r-1250",
+      "name": "Ocean Roll Bellville",
+      "cuisines": [
+        "Sushi",
+        "Japanese"
+      ],
+      "rating": 4.3,
+      "delivery_fee_cents": 1500,
+      "eta_minutes": 21,
+      "is_open": true,
+      "image_url": null
+    },
+    {
+      "id": "r-9001",
+      "rating": 4.1
+    },
+    {
+      "name": "Diner Without Id",
+      "is_open": true
+    }
+  ]
+}
