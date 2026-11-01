@@ -24,5 +24,9 @@ gradlePlugin {
             id = "mrd.android.feature"
             implementationClass = "AndroidFeatureConventionPlugin"
         }
+        register("androidCompose") {
+            id = "mrd.android.compose"
+            implementationClass = "AndroidComposeConventionPlugin"
+        }
     }
 }
