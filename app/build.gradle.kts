@@ -57,5 +57,4 @@ dependencies {
     implementation(projects.core.data)
     implementation(projects.feature.discovery)
     implementation(projects.feature.details)
-
 }
