@@ -9,6 +9,6 @@ import androidx.navigation.compose.composable
  */
 fun NavGraphBuilder.discoveryScreen(onRestaurantClick: (restaurantId: String) -> Unit) {
     composable<DiscoveryRoute> {
-        DiscoveryPlaceholderScreen(onRestaurantClick = onRestaurantClick)
+        DiscoveryScreen(onRestaurantClick = onRestaurantClick)
     }
 }
