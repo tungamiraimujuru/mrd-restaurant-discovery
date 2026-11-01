@@ -37,8 +37,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.mrd.discovery.core.designsystem.components.BackButton
 import com.mrd.discovery.core.designsystem.components.EmptyView
 import com.mrd.discovery.core.designsystem.components.ErrorView
+import com.mrd.discovery.core.designsystem.components.FavoriteButton
 import com.mrd.discovery.core.designsystem.components.InfoChip
 import com.mrd.discovery.core.designsystem.components.LoadingView
 import com.mrd.discovery.core.designsystem.components.MrDImage
@@ -68,6 +70,7 @@ internal fun DetailsScreen(
         state = state,
         onBack = onBack,
         onRetry = viewModel::onRetry,
+        onFavoriteClick = viewModel::onFavoriteClick,
         modifier = modifier,
     )
 }
@@ -78,6 +81,7 @@ internal fun DetailsScreenContent(
     state: DetailsUiState,
     onBack: () -> Unit,
     onRetry: () -> Unit,
+    onFavoriteClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     // Only the hero has a dark image behind the status bar; other states sit on the light background.
@@ -104,31 +108,28 @@ internal fun DetailsScreenContent(
                 onRetry = onRetry,
             )
         }
+        if (state is DetailsUiState.Content) {
+            val favorite = state.restaurant.isFavorite
+            FavoriteButton(
+                isFavorite = favorite,
+                onClick = onFavoriteClick,
+                contentDescription = stringResource(
+                    if (favorite) R.string.details_favorite_remove else R.string.details_favorite_add,
+                ),
+                modifier = Modifier
+                    .align(Alignment.TopEnd)
+                    .statusBarsPadding()
+                    .padding(MrDSpacing.sm),
+            )
+        }
         BackButton(
+            contentDescription = stringResource(R.string.details_back),
             onClick = onBack,
             modifier = Modifier
                 .align(Alignment.TopStart)
                 .statusBarsPadding()
                 .padding(MrDSpacing.sm),
         )
-    }
-}
-
-@Composable
-private fun BackButton(onClick: () -> Unit, modifier: Modifier = Modifier) {
-    val label = stringResource(R.string.details_back)
-    Surface(
-        modifier = modifier,
-        shape = CircleShape,
-        color = MaterialTheme.colorScheme.surfaceContainerLowest.copy(alpha = 0.85f),
-        shadowElevation = 2.dp,
-    ) {
-        IconButton(
-            onClick = onClick,
-            modifier = Modifier.semantics { contentDescription = label },
-        ) {
-            Text(text = "←", style = MaterialTheme.typography.titleLarge)
-        }
     }
 }
 
@@ -223,6 +224,7 @@ private fun ContentPreview() {
             state = DetailsUiState.Content(previewRestaurant()),
             onBack = {},
             onRetry = {},
+            onFavoriteClick = {},
         )
     }
 }
@@ -231,6 +233,6 @@ private fun ContentPreview() {
 @Composable
 private fun NotFoundPreview() {
     MrDTheme {
-        DetailsScreenContent(state = DetailsUiState.NotFound, onBack = {}, onRetry = {})
+        DetailsScreenContent(state = DetailsUiState.NotFound, onBack = {}, onRetry = {}, onFavoriteClick = {})
     }
 }
