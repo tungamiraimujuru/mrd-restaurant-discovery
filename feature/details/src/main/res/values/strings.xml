@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="details_back">Back</string>
+    <string name="details_open">OPEN</string>
+    <string name="details_closed">CLOSED</string>
+    <string name="details_eta">%1$d min</string>
+    <string name="details_fee_free">Free delivery</string>
+    <string name="details_fee_paid">%1$s delivery</string>
+    <string name="details_loading">Loading restaurant</string>
+    <string name="details_retry">Retry</string>
+    <string name="details_not_found_title">Restaurant not found</string>
+    <string name="details_not_found_message">This restaurant may have been removed, or the link is no longer valid.</string>
+    <string name="details_failed_title">Could not load this restaurant</string>
+    <string name="details_failed_message">Check your internet connection and try again.</string>
+</resources>

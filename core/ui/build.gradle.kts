@@ -8,4 +8,7 @@ android {
 
 dependencies {
     api(libs.androidx.activity.compose)
+    api(projects.core.common)
+
+    testImplementation(libs.junit)
 }
