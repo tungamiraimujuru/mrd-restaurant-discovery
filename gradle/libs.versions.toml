@@ -19,6 +19,8 @@ navigationCompose = "2.10.2"
 spotless = "8.6.0"
 ktlint = "1.8.0"
 composeRules = "0.6.6"
+composeLintChecks = "1.5.0"
+
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -44,6 +46,7 @@ androidx-hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navig
 # build-logic needs these as libraries
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
 kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+slack-compose-lint-checks = { group = "com.slack.lint.compose", name = "compose-lint-checks", version.ref = "composeLintChecks" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
