@@ -22,6 +22,21 @@ fun MrDNavHost(modifier: Modifier = Modifier, navController: NavHostController =
         modifier = modifier,
     ) {
         discoveryScreen(onRestaurantClick = { id -> navController.navigate(DetailsRoute(id)) })
-        detailsScreen(onBack = { navController.popBackStack() })
+        detailsScreen(onBack = { navController.navigateUpOrToList() })
+    }
+}
+
+/**
+ * When Details was opened by a deep link there is nothing below it, so popping would leave an
+ * empty screen. Go to the list instead. The system back gesture still leaves the app, which is
+ * the normal behaviour for a link that came from outside.
+ */
+private fun NavHostController.navigateUpOrToList() {
+    if (previousBackStackEntry != null) {
+        popBackStack()
+    } else {
+        navigate(DiscoveryRoute) {
+            popUpTo<DetailsRoute> { inclusive = true }
+        }
     }
 }
