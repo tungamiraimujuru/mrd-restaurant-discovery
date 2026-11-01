@@ -77,6 +77,11 @@ internal class DiscoveryViewModel @Inject constructor(
 
     fun onRefresh() = refresh() // was onRetry(); the banner, error view and pull gesture all use it
 
+    /** [favorite] is the state the user asked for, so a double tap cannot flip it back. */
+    fun onFavoriteClick(restaurantId: String, favorite: Boolean) {
+        viewModelScope.launch { repository.setFavorite(restaurantId, favorite) }
+    }
+
     // The outcome is not used here: the repository publishes it through the sync state, which is
     // what drives the banner and the error view.
     private fun refresh() {

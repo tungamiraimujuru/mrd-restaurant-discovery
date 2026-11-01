@@ -144,6 +144,44 @@ class DetailsViewModelTest {
     fun savedStateKeyMatchesTheRouteArgumentName() {
         assertEquals(DetailsViewModel.KEY_ID, DetailsRoute.serializer().descriptor.getElementName(0))
     }
+
+    @Test
+    fun favoriteClickFlipsTheCurrentState() = runTest(mainRule.dispatcher) {
+        repository.restaurants.value = listOf(restaurant(isFavorite = false))
+        repository.syncState.value = synced
+        val viewModel = newViewModel()
+        collect(viewModel)
+
+        viewModel.onFavoriteClick()
+        runCurrent()
+
+        assertEquals(listOf("r-1" to true), repository.favoriteCalls)
+    }
+
+    @Test
+    fun favoriteClickOnAFavoriteRemovesIt() = runTest(mainRule.dispatcher) {
+        repository.restaurants.value = listOf(restaurant(isFavorite = true))
+        repository.syncState.value = synced
+        val viewModel = newViewModel()
+        collect(viewModel)
+
+        viewModel.onFavoriteClick()
+        runCurrent()
+
+        assertEquals(listOf("r-1" to false), repository.favoriteCalls)
+    }
+
+    @Test
+    fun favoriteClickIsIgnoredUntilTheRestaurantIsLoaded() = runTest(mainRule.dispatcher) {
+        repository.syncState.value = SyncState(isRefreshing = true)
+        val viewModel = newViewModel()
+        collect(viewModel)
+
+        viewModel.onFavoriteClick()
+        runCurrent()
+
+        assertTrue(repository.favoriteCalls.isEmpty())
+    }
 }
 
 private class FakeRestaurantRepository : RestaurantRepository {
@@ -163,5 +201,9 @@ private class FakeRestaurantRepository : RestaurantRepository {
         return AppResult.Success(Unit)
     }
 
-    override suspend fun setFavorite(id: String, favorite: Boolean) = Unit
+    val favoriteCalls = mutableListOf<Pair<String, Boolean>>()
+
+    override suspend fun setFavorite(id: String, favorite: Boolean) {
+        favoriteCalls += id to favorite
+    }
 }

@@ -44,6 +44,7 @@ internal fun DiscoveryScreen(
         onQueryChange = viewModel::onQueryChange,
         onOpenNowToggle = viewModel::onOpenNowToggle,
         onRefresh = viewModel::onRefresh,
+        onFavoriteClick = viewModel::onFavoriteClick,
         onRestaurantClick = onRestaurantClick,
         modifier = modifier,
     )
@@ -57,6 +58,7 @@ internal fun DiscoveryScreenContent(
     onOpenNowToggle: () -> Unit,
     onRefresh: () -> Unit,
     onRestaurantClick: (String) -> Unit,
+    onFavoriteClick: (String, Boolean) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     Scaffold(modifier = modifier) { innerPadding ->
@@ -82,6 +84,7 @@ internal fun DiscoveryScreenContent(
                         bottomInset = innerPadding.calculateBottomPadding(),
                         onRefresh = onRefresh,
                         onRestaurantClick = onRestaurantClick,
+                        onFavoriteClick = onFavoriteClick,
                     )
 
                     is DiscoveryContent.Empty -> EmptyView(
@@ -138,6 +141,7 @@ private fun RestaurantList(
     bottomInset: Dp,
     onRefresh: () -> Unit,
     onRestaurantClick: (String) -> Unit,
+    onFavoriteClick: (String, Boolean) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     PullToRefreshBox(
@@ -184,6 +188,7 @@ private fun RestaurantList(
                 RestaurantCard(
                     restaurant = restaurant,
                     onClick = { onRestaurantClick(restaurant.id) },
+                    onFavoriteClick = { onFavoriteClick(restaurant.id, !restaurant.isFavorite) },
                 )
             }
         }
@@ -225,6 +230,7 @@ private fun LoadedOfflinePreview() {
             onOpenNowToggle = {},
             onRefresh = {},
             onRestaurantClick = {},
+            onFavoriteClick = { _, _ -> },
         )
     }
 }
@@ -239,6 +245,7 @@ private fun ErrorPreview() {
             onOpenNowToggle = {},
             onRefresh = {},
             onRestaurantClick = {},
+            onFavoriteClick = { _, _ -> },
         )
     }
 }
@@ -256,6 +263,7 @@ private fun EmptyPreview() {
             onOpenNowToggle = {},
             onRefresh = {},
             onRestaurantClick = {},
+            onFavoriteClick = { _, _ -> },
         )
     }
 }

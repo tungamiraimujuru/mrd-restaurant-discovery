@@ -46,6 +46,11 @@ internal class DetailsViewModel @Inject constructor(
         viewModelScope.launch { repository.refresh() }
     }
 
+    fun onFavoriteClick() {
+        val current = (uiState.value as? DetailsUiState.Content)?.restaurant ?: return
+        viewModelScope.launch { repository.setFavorite(restaurantId, !current.isFavorite) }
+    }
+
     private fun buildState(restaurant: Restaurant?, sync: SyncState): DetailsUiState = when {
         restaurant != null -> DetailsUiState.Content(restaurant.toDetailsUi(currencyFormatter))
         sync.lastSyncedAtMillis != null -> DetailsUiState.NotFound
