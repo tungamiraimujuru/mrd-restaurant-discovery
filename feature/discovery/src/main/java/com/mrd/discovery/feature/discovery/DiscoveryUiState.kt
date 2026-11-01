@@ -7,6 +7,7 @@ import androidx.compose.runtime.Immutable
 internal data class DiscoveryUiState(
     val query: String = "",
     val openNowOnly: Boolean = false,
+    val isRefreshing: Boolean = false,
     val content: DiscoveryContent = DiscoveryContent.Loading,
 )
 

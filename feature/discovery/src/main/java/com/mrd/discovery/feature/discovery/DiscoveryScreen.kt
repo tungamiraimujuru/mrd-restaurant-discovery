@@ -9,15 +9,18 @@ import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.mrd.discovery.core.designsystem.components.EmptyView
@@ -40,7 +43,7 @@ internal fun DiscoveryScreen(
         state = state,
         onQueryChange = viewModel::onQueryChange,
         onOpenNowToggle = viewModel::onOpenNowToggle,
-        onRetry = viewModel::onRetry,
+        onRefresh = viewModel::onRefresh,
         onRestaurantClick = onRestaurantClick,
         modifier = modifier,
     )
@@ -52,7 +55,7 @@ internal fun DiscoveryScreenContent(
     state: DiscoveryUiState,
     onQueryChange: (String) -> Unit,
     onOpenNowToggle: () -> Unit,
-    onRetry: () -> Unit,
+    onRefresh: () -> Unit,
     onRestaurantClick: (String) -> Unit,
     modifier: Modifier = Modifier,
 ) {
@@ -75,8 +78,9 @@ internal fun DiscoveryScreenContent(
 
                     is DiscoveryContent.Loaded -> RestaurantList(
                         content = content,
+                        isRefreshing = state.isRefreshing,
                         bottomInset = innerPadding.calculateBottomPadding(),
-                        onRetry = onRetry,
+                        onRefresh = onRefresh,
                         onRestaurantClick = onRestaurantClick,
                     )
 
@@ -95,7 +99,7 @@ internal fun DiscoveryScreenContent(
                         title = stringResource(R.string.discovery_error_title),
                         message = stringResource(content.kind.messageRes()),
                         retryLabel = stringResource(R.string.discovery_retry),
-                        onRetry = onRetry,
+                        onRetry = onRefresh,
                     )
                 }
             }
@@ -126,54 +130,62 @@ private fun DiscoveryHeader(state: DiscoveryUiState, onQueryChange: (String) -> 
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun RestaurantList(
     content: DiscoveryContent.Loaded,
-    bottomInset: androidx.compose.ui.unit.Dp,
-    onRetry: () -> Unit,
+    isRefreshing: Boolean,
+    bottomInset: Dp,
+    onRefresh: () -> Unit,
     onRestaurantClick: (String) -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    LazyColumn(
-        modifier = modifier.fillMaxSize(),
-        contentPadding = PaddingValues(
-            start = MrDSpacing.md,
-            end = MrDSpacing.md,
-            top = MrDSpacing.sm,
-            bottom = bottomInset + MrDSpacing.md,
-        ),
-        verticalArrangement = Arrangement.spacedBy(MrDSpacing.md),
+    PullToRefreshBox(
+        isRefreshing = isRefreshing,
+        onRefresh = onRefresh,
+        modifier = modifier,
     ) {
-        content.offline?.let { notice ->
-            item(key = OFFLINE_KEY, contentType = OFFLINE_KEY) {
-                OfflineBanner(
-                    title = stringResource(R.string.discovery_offline_title),
-                    message = offlineMessage(notice),
-                    retryLabel = stringResource(R.string.discovery_retry),
-                    onRetry = onRetry,
+        LazyColumn(
+            modifier = Modifier.fillMaxSize(),
+            contentPadding = PaddingValues(
+                start = MrDSpacing.md,
+                end = MrDSpacing.md,
+                top = MrDSpacing.sm,
+                bottom = bottomInset + MrDSpacing.md,
+            ),
+            verticalArrangement = Arrangement.spacedBy(MrDSpacing.md),
+        ) {
+            content.offline?.let { notice ->
+                item(key = OFFLINE_KEY, contentType = OFFLINE_KEY) {
+                    OfflineBanner(
+                        title = stringResource(R.string.discovery_offline_title),
+                        message = offlineMessage(notice),
+                        retryLabel = stringResource(R.string.discovery_retry),
+                        onRetry = onRefresh,
+                    )
+                }
+            }
+            item(key = COUNT_KEY, contentType = COUNT_KEY) {
+                Text(
+                    text = pluralStringResource(
+                        R.plurals.discovery_count,
+                        content.restaurants.size,
+                        content.restaurants.size,
+                    ),
+                    style = MaterialTheme.typography.labelMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
             }
-        }
-        item(key = COUNT_KEY, contentType = COUNT_KEY) {
-            Text(
-                text = pluralStringResource(
-                    R.plurals.discovery_count,
-                    content.restaurants.size,
-                    content.restaurants.size,
-                ),
-                style = MaterialTheme.typography.labelMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-        }
-        items(
-            items = content.restaurants,
-            key = { it.id },
-            contentType = { RESTAURANT_TYPE },
-        ) { restaurant ->
-            RestaurantCard(
-                restaurant = restaurant,
-                onClick = { onRestaurantClick(restaurant.id) },
-            )
+            items(
+                items = content.restaurants,
+                key = { it.id },
+                contentType = { RESTAURANT_TYPE },
+            ) { restaurant ->
+                RestaurantCard(
+                    restaurant = restaurant,
+                    onClick = { onRestaurantClick(restaurant.id) },
+                )
+            }
         }
     }
 }
@@ -211,7 +223,7 @@ private fun LoadedOfflinePreview() {
             ),
             onQueryChange = {},
             onOpenNowToggle = {},
-            onRetry = {},
+            onRefresh = {},
             onRestaurantClick = {},
         )
     }
@@ -225,7 +237,7 @@ private fun ErrorPreview() {
             state = DiscoveryUiState(content = DiscoveryContent.Error(ErrorKind.Network)),
             onQueryChange = {},
             onOpenNowToggle = {},
-            onRetry = {},
+            onRefresh = {},
             onRestaurantClick = {},
         )
     }
@@ -242,7 +254,7 @@ private fun EmptyPreview() {
             ),
             onQueryChange = {},
             onOpenNowToggle = {},
-            onRetry = {},
+            onRefresh = {},
             onRestaurantClick = {},
         )
     }

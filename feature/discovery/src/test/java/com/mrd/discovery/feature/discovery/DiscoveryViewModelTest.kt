@@ -19,6 +19,7 @@ import kotlinx.coroutines.test.advanceTimeBy
 import kotlinx.coroutines.test.runCurrent
 import kotlinx.coroutines.test.runTest
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Rule
@@ -179,9 +180,23 @@ class DiscoveryViewModelTest {
         runCurrent()
         assertEquals(1, repository.refreshCount)
 
-        viewModel.onRetry()
+        viewModel.onRefresh()
         runCurrent()
         assertEquals(2, repository.refreshCount)
+    }
+
+    @Test
+    fun refreshIndicatorFollowsSyncProgress() = runTest(mainRule.dispatcher) {
+        repository.restaurants.value = listOf(restaurant("1", "Sushi"))
+        repository.syncState.value = SyncState(isRefreshing = true, lastSyncedAtMillis = now)
+        val states = collect(newViewModel())
+
+        assertTrue(states.last().isRefreshing)
+        assertTrue(states.last().content is DiscoveryContent.Loaded)
+
+        repository.syncState.value = synced()
+        runCurrent()
+        assertFalse(states.last().isRefreshing)
     }
 }
 

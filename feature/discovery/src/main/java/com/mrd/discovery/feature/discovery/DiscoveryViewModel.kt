@@ -54,6 +54,7 @@ internal class DiscoveryViewModel @Inject constructor(
         DiscoveryUiState(
             query = text,
             openNowOnly = openOnly,
+            isRefreshing = sync.isRefreshing,
             content = buildContent(filter, restaurants, sync),
         )
     }.stateIn(
@@ -74,7 +75,7 @@ internal class DiscoveryViewModel @Inject constructor(
         savedStateHandle[KEY_OPEN_NOW] = !openNowOnly.value
     }
 
-    fun onRetry() = refresh()
+    fun onRefresh() = refresh() // was onRetry(); the banner, error view and pull gesture all use it
 
     // The outcome is not used here: the repository publishes it through the sync state, which is
     // what drives the banner and the error view.
