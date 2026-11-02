@@ -23,6 +23,9 @@ android {
 
     buildTypes {
         release {
+            // Debug-signed so the release variant can be installed and checked locally.
+            // Real signing would come from secrets in CI.
+            signingConfig = signingConfigs.getByName("debug")
             optimization {
                 enable = true
                 packageScope = setOf("androidx.**", "kotlin.**", "kotlinx.**")
