@@ -124,7 +124,79 @@ Chosen: preserve user input and scroll position, and reduce list work. Evidence:
 
 ## 9. AI-assisted development
 
-I used an AI assistant throughout, treating it as a fast pair programmer whose output is a draft.
+**Short answer.** Treat AI as a fast drafter inside a system that verifies everything, not as a
+reviewer or a decision-maker. Productivity comes from giving it good context and using it where the
+task is mechanical and well specified. Quality comes from automated checks, small reviewable changes
+and a human who owns every line. I did this on this project, and I would scale it the same way.
+
+I used an AI assistant throughout, as a paired collaborator whose output is a draft I own. This is the
+same way I worked on my earlier projects ([WayPoint](https://github.com/tungamiraimujuru/Waypoint) and
+DocuSense), and this assessment applies what I learned there: the skill is in directing, reviewing and
+rejecting, and the review should be encoded in checks so it does not depend on my attention.
+
+**Design with Stitch.** The assessment brief was entered into Google Stitch, which produced the
+Discovery and Details screens and a design system. Stitch was then asked for three variations of the
+Discovery screen (editorial, high density, Material 3 expressive). The designs were used as input for
+the composables, not copied: the colour, type and shape tokens became the theme in `:core:designsystem`,
+and anything the data model could not back (review counts, offers, distances, a menu) was left out. I
+looked at all three variations and chose the first generated design, because the timebox meant
+committing to one design to get started, and it covered everything the brief asks for, so it was a
+good fit for a first iteration. The variations stay in `docs/design` for comparison, and the full
+mapping is in `docs/DESIGN.md`.
+
+**Generated output is untrusted input.** In WayPoint, Claude wrapped its JSON in Markdown fences about
+5% of the time despite explicit instructions, so the parser had to tolerate it
+([article](https://medium.com/dvt-engineering/how-to-stream-structured-ai-on-android-without-sacrificing-ux-667ac8b83e7c)).
+I apply the same stance to AI-assisted code and design: assume it can be confidently wrong, and put a
+check between it and the codebase. Stitch contradicted itself (its text and its tokens give different
+primary colours), and I resolved that by checking contrast. The mock backend also ships two junk
+records on purpose, so handling of bad data is exercised, not assumed.
+
+**Context before prompts.** The assistant started from the brief, the Stitch tokens and a written set
+of Android standards (MVVM, Hilt, Compose rules, no new dependencies, an injected clock), so its output
+began from our conventions, not its defaults. The module layout and the rule that features never depend
+on each other carry over from my earlier projects.
+
+**Gates from the first phase.** WayPoint's retrospective says I would add formatting and gates from the
+start and treat tests as the spec. Here Spotless (ktlint with Compose rules), Compose lint checks,
+Android lint with warnings as errors, 13 repository checks in `tools/check_standards.sh` and CI were set
+up in the foundation phases, before any feature code. The work then ran in 11 phases, each on its own
+branch, built, linted and tested before it was committed with a conventional message, with the commands
+chained so that a failing gate commits nothing. These gates caught real problems in drafts: a
+state-restoration bug where a `snapshotFlow` over plain parameters never re-emitted (found by
+`ScrollResetTest`, fixed with `rememberUpdatedState`), duplicate `DeliveryFee` types across modules,
+placeholder versions in the version catalog, and a lint error from remembering a return value in the
+wrong place.
+
+**What stayed a human decision.** Module boundaries, what to cut from the design, dependency choices,
+and every number in these documents. I rejected Timber in favour of a small injected logger interface,
+and I resolved the colour conflict myself. The jank figures come from a script I ran on my own
+emulator, and CI fails if a documentation placeholder is left behind, so an unwritten claim cannot ship.
+
+**At scale, across squads.** I would keep the same shape and add team-level rules.
+
+*Where it is used.* AI is most useful on well-specified, mechanical work: boilerplate, tests for
+existing behaviour, migrations, and explaining unfamiliar code. It gets more scrutiny, and a named
+human owner, on security, payments, authentication, concurrency and anything that touches personal
+data.
+
+*Shared context.* The standards, design tokens and module map live in the repo as the context every
+squad's assistant starts from. Prompts and rules files are treated like API contracts (as
+`SystemPrompts.ITINERARY_V2` is in WayPoint): reviewed, versioned and easy to roll back.
+
+*Checks over trust.* Every rule becomes a check (lint, dependency rules, CI), because a rule that only
+exists in a prompt drifts. Generated code passes the same gates as hand-written code, with no
+exceptions.
+
+*Review.* AI-assisted pull requests stay small and single-purpose. The author must be able to explain
+every line, and the PR template records that AI was used and what was verified by hand. Tests are the
+acceptance criterion: write or review the test first, then accept the implementation.
+
+*Safety.* Secrets, personal data and customer data stay out of prompts. Teams use approved tools, and
+new dependencies an assistant suggests go through the normal dependency review.
+
+*Measurement.* Success is measured on outcomes (review time, change failure rate, flaky tests, time to
+merge), not lines generated. If quality metrics fall, the rules tighten.
 
 **How it was kept productive**
 

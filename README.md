@@ -105,8 +105,21 @@ graph TD
 
 More detail, trade-offs and how this would scale is in [SOLUTION.md](SOLUTION.md).
 
+## Design
+
+The screens follow designs made in Google Stitch from the assessment brief. Stitch also produced three
+variations of the Discovery screen, which were compared against the base design.
+
+| Discovery | Details |
+|---|---|
+| ![Discovery design](docs/design/chosen-discovery.png) | ![Details design](docs/design/chosen-details.png) |
+
+How the designs became code, what was left out and why: [docs/DESIGN.md](docs/DESIGN.md).
+The Stitch exports are in [docs/design/source](docs/design/source).
+
 ## Documents
 
+- [docs/DESIGN.md](docs/DESIGN.md): how the Stitch designs informed the UI
 - [SOLUTION.md](SOLUTION.md): design decisions, scaling, testing, performance, AI-assisted workflow
 - [docs/CODING_STANDARDS.md](docs/CODING_STANDARDS.md): the rules the build enforces
 - [docs/GIT_WORKFLOW.md](docs/GIT_WORKFLOW.md): branches, commits and pull requests
