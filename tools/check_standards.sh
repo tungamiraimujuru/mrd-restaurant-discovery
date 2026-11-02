@@ -44,6 +44,15 @@ else
   echo "ok:   Kotlin only"
 fi
 
+placeholders=$(grep -rn "FILL IN" --include='*.md' . --exclude-dir=.git --exclude-dir=.claude --exclude-dir=build 2>/dev/null || true)
+if [ -n "$placeholders" ]; then
+  echo "FAIL: documentation still has FILL IN placeholders"
+  echo "$placeholders" | sed 's/^/      /'
+  failures=$((failures + 1))
+else
+  echo "ok:   no unfilled documentation placeholders"
+fi
+
 if [ "$failures" -gt 0 ]; then
   echo
   echo "$failures rule(s) broken. See docs/CODING_STANDARDS.md."
