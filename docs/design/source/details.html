@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cape Town Grill - Mr D Food</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-low": "#f2f4f6",
+            "error": "#ba1a1a",
+            "on-background": "#191c1e",
+            "on-primary-fixed-variant": "#653e00",
+            "surface-container-highest": "#e0e3e5",
+            "tertiary-fixed-dim": "#4edea3",
+            "primary-fixed": "#ffddb8",
+            "on-secondary-container": "#586377",
+            "on-secondary": "#ffffff",
+            "surface-dim": "#d8dadc",
+            "on-surface": "#191c1e",
+            "outline": "#867461",
+            "on-primary-container": "#613b00",
+            "on-tertiary-fixed-variant": "#005236",
+            "outline-variant": "#d8c3ad",
+            "primary": "#855300",
+            "tertiary-fixed": "#6ffbbe",
+            "inverse-surface": "#2d3133",
+            "on-primary": "#ffffff",
+            "tertiary": "#006c49",
+            "on-tertiary-container": "#004e34",
+            "surface-bright": "#f7f9fb",
+            "tertiary-container": "#30c88f",
+            "inverse-on-surface": "#eff1f3",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "secondary-container": "#d5e0f8",
+            "secondary-fixed-dim": "#bcc7de",
+            "inverse-primary": "#ffb95f",
+            "secondary-fixed": "#d8e3fb",
+            "surface-tint": "#855300",
+            "surface": "#f7f9fb",
+            "on-error-container": "#93000a",
+            "on-secondary-fixed": "#111c2d",
+            "surface-container-high": "#e6e8ea",
+            "on-secondary-fixed-variant": "#3c475a",
+            "primary-fixed-dim": "#ffb95f",
+            "on-surface-variant": "#534434",
+            "surface-variant": "#e0e3e5",
+            "on-tertiary-fixed": "#002113",
+            "secondary": "#545f73",
+            "surface-container": "#eceef0",
+            "primary-container": "#f59e0b",
+            "on-error": "#ffffff",
+            "on-primary-fixed": "#2a1700",
+            "background": "#f7f9fb",
+            "error-container": "#ffdad6"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xs": "0.25rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2rem",
+            "gutter": "1rem",
+            "space-sm": "0.5rem",
+            "margin": "1rem",
+            "space-md": "1rem"
+          },
+          "fontFamily": {
+            "label-sm": ["Inter"],
+            "label-md": ["Inter"],
+            "headline-md": ["Inter"],
+            "body-md": ["Inter"],
+            "headline-lg-mobile": ["Inter"],
+            "label-lg": ["Inter"],
+            "headline-sm": ["Inter"],
+            "headline-lg": ["Inter"],
+            "body-sm": ["Inter"],
+            "body-lg": ["Inter"]
+          },
+          "fontSize": {
+            "label-sm": ["10px", { "lineHeight": "14px", "fontWeight": "700" }],
+            "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+            "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "700" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "32px", "fontWeight": "700" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+            "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .material-symbols-outlined.fill-icon {
+      font-variation-settings: 'FILL' 1, 'wght' 600, 'GRAD' 0, 'opsz' 24;
+    }
+    /* Hide scrollbars for clean native Android carousels */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex justify-center">
+<!-- Mobile Viewport Canvas Container (390-412dp Android shell simulation) -->
+<main class="w-full max-w-md bg-surface min-h-screen relative flex flex-col pb-28 shadow-2xl">
+<!-- Native Android Status Bar (Light/Over-Image scrim) -->
+<header class="absolute top-0 left-0 right-0 z-30 flex items-center justify-between px-space-md pt-2 text-white text-label-md font-label-md select-none bg-gradient-to-b from-black/60 to-transparent pointer-events-none">
+<span class="tracking-tight">12:45</span>
+<div class="flex items-center space-x-1.5 opacity-90">
+<span class="material-symbols-outlined text-[16px]" data-icon="signal_cellular_4_bar">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="wifi">wifi</span>
+<span class="material-symbols-outlined text-[18px]" data-icon="battery_full">battery_full</span>
+</div>
+</header>
+<!-- Collapsing Hero Header Section -->
+<section class="relative w-full h-64 bg-inverse-surface overflow-hidden">
+<!-- Background Grill/Steakhouse appetizing imagery -->
+<img class="w-full h-full object-cover object-center filter brightness-[0.88]" data-alt="A mouthwatering prime South African ribeye steak grilling over open flame braai embers with smoke wisps, rosemary sprigs, and glowing charcoal. Warm golden amber lighting illuminates the textured charred crust in a vibrant culinary setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD86Qw1jnl5akOeunVY4OS3S6DozeeDF8PkxQavPTL54AWlNdNMEwR4XLglcuyEH5IKQ2IJiUakH33Amdo7mTASxadlsTcvAHgdik2jLanTo_HxdQC0D341oqsWN_srWqR4okdE8tpUlB4ESEYEkdW3s_wxlT6lJG9ahnQE3QHiFbCTMx6o5zy9IrH0jqBYz-sUaPdBMbt-uwis4o04VZaczUwewA6oFqr2alIsntE"/>
+<!-- Ambient Gradient Overlay for text and touch targets readability -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30 pointer-events-none"></div>
+<!-- Hero Header Navigation Layer (Android Top Bar Action items) -->
+<div class="absolute top-8 left-0 right-0 z-20 flex items-center justify-between px-space-md">
+<!-- Back Navigation Button -->
+<button aria-label="Back" class="w-10 h-10 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-on-surface flex items-center justify-center shadow-md active:scale-95 transition-all duration-150">
+<span class="material-symbols-outlined text-[22px]" data-icon="arrow_back">arrow_back</span>
+</button>
+<!-- Right Action Cluster: Favorite & Share -->
+<div class="flex items-center space-x-2">
+<button aria-label="Favorite" class="w-10 h-10 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-on-surface flex items-center justify-center shadow-md active:scale-95 transition-all duration-150">
+<span class="material-symbols-outlined text-[20px] text-error fill-icon" data-icon="favorite" data-weight="fill" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+<button aria-label="Share" class="w-10 h-10 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-on-surface flex items-center justify-center shadow-md active:scale-95 transition-all duration-150">
+<span class="material-symbols-outlined text-[20px]" data-icon="share">share</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Restaurant Info Card (Overlapping Hero Surface) -->
+<article class="relative z-10 -mt-6 mx-space-md bg-surface-container-lowest rounded-xl p-space-md shadow-sm border border-outline-variant/30">
+<!-- Restaurant Identity Row -->
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center space-x-1.5">
+<h1 class="text-headline-lg-mobile font-headline-lg-mobile text-on-surface tracking-tight">Cape Town Grill</h1>
+<!-- Verified Badge -->
+<span class="inline-flex items-center justify-center text-tertiary" title="Verified Partner">
+<span class="material-symbols-outlined text-[20px] fill-icon" data-icon="verified" data-weight="fill" style="font-variation-settings: 'FILL' 1;">verified</span>
+</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">Steakhouse · South African Grill · Burgers</p>
+</div>
+<!-- Offline Status Sync Pill / Live status -->
+<span class="inline-flex items-center space-x-1 bg-surface-container text-on-surface-variant px-2 py-0.5 rounded-full text-label-sm font-label-sm border border-outline-variant/40" title="System synced">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>Live Sync</span>
+</span>
+</div>
+<!-- Key Metrics Pill Row -->
+<div class="grid grid-cols-2 gap-2 mt-3.5 pt-3 border-t border-surface-container">
+<!-- Rating Metric -->
+<div class="flex items-center space-x-1.5 bg-surface-container-low px-2.5 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-[18px] text-primary fill-icon" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-label-md font-label-md text-on-surface">4.6</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">(520+)</span>
+</div>
+<!-- Delivery Fee -->
+<div class="flex items-center space-x-1.5 bg-surface-container-low px-2.5 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="moped">moped</span>
+<span class="text-label-md font-label-md text-on-surface">R15.00</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">fee</span>
+</div>
+<!-- ETA Metric -->
+<div class="flex items-center space-x-1.5 bg-surface-container-low px-2.5 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="schedule">schedule</span>
+<span class="text-label-md font-label-md text-on-surface">30–40 min</span>
+</div>
+<!-- Availability Status Badge -->
+<div class="flex items-center space-x-1.5 bg-tertiary-fixed/40 text-on-tertiary-fixed-variant px-2.5 py-1.5 rounded-lg">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="text-label-md font-label-md font-bold truncate">Open • Till 22:00</span>
+</div>
+</div>
+</article>
+<!-- Promotional Delivery Banner -->
+<div class="mx-space-md mt-3">
+<div class="bg-primary-fixed/50 border border-primary/20 rounded-xl px-3.5 py-2.5 flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-on-primary-container text-[20px]" data-icon="local_offer">local_offer</span>
+<p class="text-label-md font-label-md text-on-primary-container leading-tight">
+            Spend R150 for free delivery on selected sides
+          </p>
+</div>
+<span class="material-symbols-outlined text-on-primary-container text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+<!-- Search in Menu Bar (M3 Docked Input) -->
+<div class="px-space-md mt-4">
+<div class="relative flex items-center bg-surface-container-lowest rounded-full border border-outline-variant/50 shadow-sm px-3.5 py-2.5">
+<span class="material-symbols-outlined text-secondary mr-2 text-[20px]" data-icon="search">search</span>
+<input class="w-full bg-transparent border-none p-0 text-body-md font-body-md placeholder:text-on-surface-variant/70 focus:outline-none focus:ring-0 text-on-surface" placeholder="Search Cape Town Grill menu..." type="text"/>
+<button aria-label="Voice search or filter" class="text-on-surface-variant hover:text-on-surface pl-1">
+<span class="material-symbols-outlined text-[20px]" data-icon="mic">mic</span>
+</button>
+</div>
+</div>
+<!-- Horizontal Category Tabs (M3 Filter Chips Carousel) -->
+<nav aria-label="Menu Categories" class="mt-3.5 border-b border-surface-container-high bg-surface sticky top-0 z-20">
+<div class="flex items-center space-x-2 px-space-md py-2 overflow-x-auto no-scrollbar">
+<!-- Active Tab: Popular -->
+<button class="bg-inverse-surface text-inverse-on-surface px-4 py-1.5 rounded-full text-label-md font-label-md whitespace-nowrap shadow-sm">
+          Popular
+        </button>
+<!-- Inactive Tab: Starters -->
+<button class="bg-surface-container-lowest text-on-surface border border-outline-variant/40 px-4 py-1.5 rounded-full text-label-md font-label-md whitespace-nowrap hover:bg-surface-container-high transition-colors">
+          Starters
+        </button>
+<!-- Inactive Tab: Mains & Steaks -->
+<button class="bg-surface-container-lowest text-on-surface border border-outline-variant/40 px-4 py-1.5 rounded-full text-label-md font-label-md whitespace-nowrap hover:bg-surface-container-high transition-colors">
+          Mains &amp; Steaks
+        </button>
+<!-- Inactive Tab: Sides & Drinks -->
+<button class="bg-surface-container-lowest text-on-surface border border-outline-variant/40 px-4 py-1.5 rounded-full text-label-md font-label-md whitespace-nowrap hover:bg-surface-container-high transition-colors">
+          Sides &amp; Drinks
+        </button>
+</div>
+</nav>
+<!-- Menu Items Section -->
+<section aria-label="Menu Items" class="px-space-md mt-4 space-y-3">
+<div class="flex items-center justify-between pt-1">
+<h2 class="text-headline-sm font-headline-sm text-on-surface">Popular Dishes</h2>
+<span class="text-label-sm font-label-sm text-on-surface-variant">4 items</span>
+</div>
+<!-- Item 1: Karoo Lamb Chops (With Image) -->
+<article class="bg-surface-container-lowest rounded-xl p-3.5 shadow-sm border border-outline-variant/20 flex space-x-3 transition-all hover:border-outline-variant/60">
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center space-x-1.5">
+<span class="inline-block w-2 h-2 rounded-full bg-primary" title="Chef Specialty"></span>
+<h3 class="text-label-lg font-label-lg text-on-surface">Karoo Lamb Chops (400g)</h3>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2 mt-1">
+              Flame-grilled with rosemary garlic butter &amp; braai salt. Served with charred lemon.
+            </p>
+</div>
+<div class="mt-3 flex items-center justify-between">
+<span class="text-headline-sm font-headline-sm text-on-surface font-bold">R189.00</span>
+</div>
+</div>
+<!-- Dish Thumbnail + Add Action Anchor -->
+<div class="relative w-24 h-24 flex-shrink-0">
+<img class="w-full h-full object-cover rounded-xl" data-alt="Juicy flame-grilled South African Karoo lamb chops garnished with fragrant rosemary sprigs and garlic butter glaze on a dark slate presentation platter, set within an artisanal Cape Town steakhouse atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuArl5rEC9Z1SeaxnJ1Y3eRATUiZ06wy0iuQ5Wu8o1iJYDye5N1lZzlUVoRpC6hprVaRq_ka_25iS1JOrT68di4mje6qiLEk9ImMbuhZBm-OV1ZYHjMf5-mDnGZVbv-D2IBufTkDIr101K9tfR8lpUQNnLHVXOzVGsQ-D2XpwXgF2QqcLdAnghZi0SQlYV2V1xIOxVTM-8F3oYf5-bFmI7WPD-_8ZkTHQ-d7cKktdOY"/>
+<button aria-label="Add Karoo Lamb Chops" class="absolute -bottom-1.5 -right-1.5 w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-md active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[20px] font-bold" data-icon="add">add</span>
+</button>
+</div>
+</article>
+<!-- Item 2: Wagyu Smash Burger (With Image) -->
+<article class="bg-surface-container-lowest rounded-xl p-3.5 shadow-sm border border-outline-variant/20 flex space-x-3 transition-all hover:border-outline-variant/60">
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<h3 class="text-label-lg font-label-lg text-on-surface">Wagyu Smash Burger</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2 mt-1">
+              Double patty, aged cheddar, truffle aioli on brioche with house pickles.
+            </p>
+</div>
+<div class="mt-3 flex items-center justify-between">
+<span class="text-headline-sm font-headline-sm text-on-surface font-bold">R125.00</span>
+</div>
+</div>
+<!-- Dish Thumbnail + Add Action Anchor -->
+<div class="relative w-24 h-24 flex-shrink-0">
+<img class="w-full h-full object-cover rounded-xl" data-alt="Gourmet double Wagyu smash burger with bubbling melted aged cheddar cheese, golden brioche bun, and black truffle aioli glaze captured in dramatic studio culinary food photography against warm amber backlighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzHCJ7Im5KDs7O-2T0nMsD0Qs82TlB5sF11f8I8KEUDxTwnEKECRi0ypLpd3bUQ66UQYnkrm18Rrk2QVyN1bDS006-pHHQKrieKITApzqdV7O1OrnJIJ96hAbpn3Nj9xoGmofweHlMonZGLc_mH5sGi62miJmsicw7OrFre1_a_3G66997HtZgKoTmhLU-j0vLErloPWk9C7ybPr4k-uU2S4hhaSG0taNyutEAzOc"/>
+<button aria-label="Add Wagyu Smash Burger" class="absolute -bottom-1.5 -right-1.5 w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-md active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[20px] font-bold" data-icon="add">add</span>
+</button>
+</div>
+</article>
+<!-- Item 3: Grilled Halloumi (Text focus + Add Button) -->
+<article class="bg-surface-container-lowest rounded-xl p-3.5 shadow-sm border border-outline-variant/20 flex items-center justify-between transition-all hover:border-outline-variant/60">
+<div class="pr-3">
+<div class="flex items-center space-x-1.5">
+<span class="text-tertiary text-label-sm font-label-sm bg-tertiary-fixed/30 px-1.5 py-0.5 rounded">VEG</span>
+<h3 class="text-label-lg font-label-lg text-on-surface">Grilled Halloumi</h3>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">
+            Citrus glaze, micro herbs, fresh rocket with toasted pine seeds.
+          </p>
+<span class="text-headline-sm font-headline-sm text-on-surface font-bold mt-2 inline-block">R69.00</span>
+</div>
+<!-- Quick Add CTA -->
+<button aria-label="Add Grilled Halloumi" class="flex-shrink-0 w-9 h-9 rounded-full bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-on-surface flex items-center justify-center shadow-sm active:scale-90 transition-all">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+</button>
+</article>
+<!-- Item 4: Peri-Peri Chicken Wings -->
+<article class="bg-surface-container-lowest rounded-xl p-3.5 shadow-sm border border-outline-variant/20 flex items-center justify-between transition-all hover:border-outline-variant/60">
+<div class="pr-3">
+<div class="flex items-center space-x-1.5">
+<span class="text-error text-label-sm font-label-sm bg-error-container/40 px-1.5 py-0.5 rounded">SPICY</span>
+<h3 class="text-label-lg font-label-lg text-on-surface">Peri-Peri Chicken Wings</h3>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">
+            Charred flame wings served with lemon herb dip and peri peri salt.
+          </p>
+<span class="text-headline-sm font-headline-sm text-on-surface font-bold mt-2 inline-block">R85.00</span>
+</div>
+<!-- Quick Add CTA -->
+<button aria-label="Add Peri-Peri Chicken Wings" class="flex-shrink-0 w-9 h-9 rounded-full bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-on-surface flex items-center justify-center shadow-sm active:scale-90 transition-all">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+</button>
+</article>
+</section>
+<!-- Bottom Floating Cart Bar / CTA -->
+<div class="fixed bottom-0 left-0 right-0 z-40 p-space-md pointer-events-none">
+<div class="max-w-md mx-auto pointer-events-auto">
+<button class="w-full bg-primary-container text-on-primary-container py-3.5 px-space-md rounded-full shadow-xl flex items-center justify-between active:scale-[0.98] transition-all duration-150 border border-primary/20">
+<!-- Left Cart Metadata -->
+<div class="flex items-center space-x-2.5">
+<span class="w-7 h-7 rounded-full bg-on-primary-container text-primary-fixed flex items-center justify-center text-label-md font-label-md">
+              2
+            </span>
+<span class="text-label-lg font-label-lg tracking-tight">View Cart • R194.00</span>
+</div>
+<!-- Right Checkout Prompt with Arrow -->
+<div class="flex items-center space-x-1">
+<span class="text-label-md font-label-md">Checkout</span>
+<span class="material-symbols-outlined text-[20px]" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</button>
+</div>
+</div>
+</main>
+</body></html>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mr D - Native Android Restaurant Discovery</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Inter Font -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-low": "#f2f4f6",
+            "error": "#ba1a1a",
+            "on-background": "#191c1e",
+            "on-primary-fixed-variant": "#653e00",
+            "surface-container-highest": "#e0e3e5",
+            "tertiary-fixed-dim": "#4edea3",
+            "primary-fixed": "#ffddb8",
+            "on-secondary-container": "#586377",
+            "on-secondary": "#ffffff",
+            "surface-dim": "#d8dadc",
+            "on-surface": "#191c1e",
+            "outline": "#867461",
+            "on-primary-container": "#613b00",
+            "on-tertiary-fixed-variant": "#005236",
+            "outline-variant": "#d8c3ad",
+            "primary": "#855300",
+            "tertiary-fixed": "#6ffbbe",
+            "inverse-surface": "#2d3133",
+            "on-primary": "#ffffff",
+            "tertiary": "#006c49",
+            "on-tertiary-container": "#004e34",
+            "surface-bright": "#f7f9fb",
+            "tertiary-container": "#30c88f",
+            "inverse-on-surface": "#eff1f3",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "secondary-container": "#d5e0f8",
+            "secondary-fixed-dim": "#bcc7de",
+            "inverse-primary": "#ffb95f",
+            "secondary-fixed": "#d8e3fb",
+            "surface-tint": "#855300",
+            "surface": "#f7f9fb",
+            "on-error-container": "#93000a",
+            "on-secondary-fixed": "#111c2d",
+            "surface-container-high": "#e6e8ea",
+            "on-secondary-fixed-variant": "#3c475a",
+            "primary-fixed-dim": "#ffb95f",
+            "on-surface-variant": "#534434",
+            "surface-variant": "#e0e3e5",
+            "on-tertiary-fixed": "#002113",
+            "secondary": "#545f73",
+            "surface-container": "#eceef0",
+            "primary-container": "#f59e0b",
+            "on-error": "#ffffff",
+            "on-primary-fixed": "#2a1700",
+            "background": "#f7f9fb",
+            "error-container": "#ffdad6"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xs": "0.25rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2rem",
+            "gutter": "1rem",
+            "space-sm": "0.5rem",
+            "margin": "1rem",
+            "space-md": "1rem"
+          },
+          "fontFamily": {
+            "label-sm": ["Inter"],
+            "label-md": ["Inter"],
+            "headline-md": ["Inter"],
+            "body-md": ["Inter"],
+            "headline-lg-mobile": ["Inter"],
+            "label-lg": ["Inter"],
+            "headline-sm": ["Inter"],
+            "headline-lg": ["Inter"],
+            "body-sm": ["Inter"],
+            "body-lg": ["Inter"]
+          },
+          "fontSize": {
+            "label-sm": ["10px", { "lineHeight": "14px", "fontWeight": "700" }],
+            "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+            "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "700" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "32px", "fontWeight": "700" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+            "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased font-body-md text-body-md flex justify-center min-h-screen">
+<!-- Mobile Viewport Wrapper (Android Device Simulation) -->
+<div class="w-full max-w-md bg-background min-h-screen flex flex-col relative shadow-2xl overflow-x-hidden pb-28">
+<!-- Native Android Status Bar (Light Mode) -->
+<div class="w-full bg-surface-container-lowest px-margin pt-2 pb-1 flex justify-between items-center text-on-surface select-none z-50">
+<span class="font-label-md text-label-md font-bold tracking-tight">12:45</span>
+<div class="flex items-center space-x-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[16px]">network_cell</span>
+<span class="material-symbols-outlined text-[16px]">wifi</span>
+<span class="material-symbols-outlined text-[16px]">battery_full</span>
+</div>
+</div>
+<!-- TopAppBar from Shared Components JSON -->
+<header class="bg-surface-container-lowest sticky top-0 z-40 flex items-center justify-between px-margin py-space-sm w-full max-w-md mx-auto shadow-sm">
+<div class="flex items-center space-x-2 overflow-hidden flex-1 mr-2">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center shrink-0 text-on-primary-fixed-variant">
+<span class="material-symbols-outlined text-[20px]" data-icon="location_on">location_on</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Deliver to</span>
+<div class="flex items-center space-x-1 cursor-pointer">
+<span class="font-label-md text-label-md text-on-surface truncate font-bold">12 Kloof St, Gardens</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface shrink-0" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+</div>
+</div>
+</div>
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container-high active:scale-95 transition-all duration-150 relative">
+<span class="material-symbols-outlined text-[24px]" data-icon="notifications">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></span>
+</button>
+</header>
+<!-- Sticky Sub-Header Canvas: Search & Filter Stack -->
+<div class="bg-surface-container-lowest pb-space-sm pt-space-xs px-margin shadow-sm z-30">
+<!-- M3 Search Bar -->
+<div class="flex items-center h-[50px] w-full bg-surface-container-low rounded-full px-space-md border border-outline-variant/30 focus-within:ring-2 focus-within:ring-primary-container transition-all">
+<span class="material-symbols-outlined text-secondary text-[22px] mr-2" data-icon="search">search</span>
+<input class="bg-transparent border-0 focus:ring-0 text-on-surface placeholder:text-on-surface-variant font-body-md text-body-md w-full p-0 leading-normal" placeholder="Search restaurants, groceries or dishes..." type="text"/>
+<div class="flex items-center space-x-1 shrink-0 ml-1">
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-secondary hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="mic">mic</span>
+</button>
+<div class="h-4 w-[1px] bg-outline-variant/60"></div>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-primary font-bold hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="tune">tune</span>
+</button>
+</div>
+</div>
+<!-- Filter Chips Horizontal Scroll -->
+<div class="flex items-center space-x-2 overflow-x-auto no-scrollbar pt-3 pb-1 -mx-margin px-margin">
+<!-- Filter chip: Open Now (Active Pill Highlighted in Brand Amber) -->
+<button class="h-9 px-3 rounded-full bg-primary-container text-on-primary-container flex items-center space-x-1.5 shrink-0 shadow-sm font-label-md text-label-md active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[16px]" data-icon="bolt">bolt</span>
+<span>Open Now</span>
+<span class="material-symbols-outlined text-[16px] ml-0.5" data-icon="check">check</span>
+</button>
+<!-- Filter chip: Rating 4.0+ -->
+<button class="h-9 px-3 rounded-full bg-surface-container-lowest text-on-surface border border-outline-variant flex items-center space-x-1.5 shrink-0 font-label-md text-label-md hover:bg-surface-container-low active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[16px] text-primary" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>Rating 4.0+</span>
+</button>
+<!-- Filter chip: Under 30 mins -->
+<button class="h-9 px-3 rounded-full bg-surface-container-lowest text-on-surface border border-outline-variant flex items-center space-x-1.5 shrink-0 font-label-md text-label-md hover:bg-surface-container-low active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[16px] text-secondary" data-icon="schedule">schedule</span>
+<span>Under 30 mins</span>
+</button>
+<!-- Filter chip: Free Delivery -->
+<button class="h-9 px-3 rounded-full bg-surface-container-lowest text-on-surface border border-outline-variant flex items-center space-x-1.5 shrink-0 font-label-md text-label-md hover:bg-surface-container-low active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[16px] text-tertiary" data-icon="moped">moped</span>
+<span>Free Delivery</span>
+</button>
+<!-- Additional More Filters Chip -->
+<button class="h-9 px-3 rounded-full bg-surface-container-lowest text-on-surface border border-outline-variant flex items-center space-x-1 shrink-0 font-label-md text-label-md hover:bg-surface-container-low active:scale-95 transition-all">
+<span>Price (R)</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="expand_more">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Offline Cached Banner Notification Bar -->
+<div class="px-margin pt-space-sm">
+<div class="bg-secondary-fixed/50 border border-secondary-fixed-dim/60 rounded-xl p-2.5 flex items-center justify-between text-on-secondary-fixed shadow-sm">
+<div class="flex items-center space-x-2.5 min-w-0 pr-2">
+<div class="w-7 h-7 rounded-full bg-surface-container-lowest/80 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[16px] text-secondary animate-spin" data-icon="cloud_sync" style="animation-duration: 3s;">cloud_sync</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm font-bold text-on-secondary-fixed">Working offline</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Cached restaurants (5 mins ago)</span>
+</div>
+</div>
+<button class="shrink-0 flex items-center space-x-1 bg-surface-container-lowest px-2 py-1 rounded-lg border border-outline-variant/40 active:scale-95 transition-all font-label-sm text-label-sm text-primary">
+<span class="material-symbols-outlined text-[14px]" data-icon="refresh">refresh</span>
+<span>Retry</span>
+</button>
+</div>
+</div>
+<!-- Discovery Main Section Content -->
+<main class="px-margin pt-4 space-y-4">
+<!-- Section Header -->
+<div class="flex justify-between items-baseline">
+<h1 class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight">Restaurants near you <span class="font-label-md text-label-md text-on-surface-variant font-normal">(24 found)</span></h1>
+<button class="font-label-md text-label-md text-primary font-bold hover:underline flex items-center">
+<span>Sort</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="swap_vert">swap_vert</span>
+</button>
+</div>
+<!-- Restaurant Card 1: Cape Town Grill -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm border border-surface-container-high hover:shadow-md transition-shadow duration-200">
+<!-- Card Hero Image Container -->
+<div class="relative w-full h-44 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A mouthwatering prime cut grilled ribeye steak with golden char marks, resting on an artisanal rustic slate platter surrounded by roasted rosemary garlic potatoes, fresh chimichurri dip, and warm bistro atmosphere lighting in a high-end Cape Town steakhouse." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjbY9iaU9ky92cq3QOGZT6REXocvBtGyJyS0QFjl9cgIFS_iExI7RsHMIsz20Fi3xwn1opuCHxXhHv-T-RjlkdMweN39jxvetiFXrWaijfldDGyMQf0N7d5Oq9m0kynhxCpgaH9fEgYGVWEtAdrIrz7M_4UhWvH9BQA8NO6jXZr4X9XdOu5cqKQcsuMx-dwsvC91CM4GBLxq3AgeaJOZkdj-4o37VHzDS4eJye7k0"/>
+<!-- Status Badge -->
+<div class="absolute top-3 left-3">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-tertiary-container text-on-tertiary-container font-bold shadow-sm">
+              OPEN
+            </span>
+</div>
+<!-- Favorite Action Button -->
+<button aria-label="Favorite" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-error shadow-sm hover:scale-105 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]" data-icon="favorite" data-weight="fill" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+<!-- ETA & Delivery Badge Overlay -->
+<div class="absolute bottom-3 right-3 flex items-center space-x-1.5">
+<div class="bg-surface-container-lowest/95 backdrop-blur-sm px-2.5 py-1 rounded-full font-label-sm text-label-sm text-on-surface flex items-center space-x-1 shadow-sm font-bold">
+<span class="material-symbols-outlined text-[14px] text-secondary" data-icon="schedule">schedule</span>
+<span>32 mins</span>
+</div>
+</div>
+</div>
+<!-- Card Metadata Bay -->
+<div class="p-3.5 space-y-1.5">
+<div class="flex justify-between items-start">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight">Cape Town Grill</h2>
+<div class="flex items-center bg-primary-fixed/60 px-2 py-0.5 rounded-full shrink-0">
+<span class="material-symbols-outlined text-[14px] text-primary mr-1" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md text-on-primary-fixed-variant font-bold">4.6</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant ml-1">(500+)</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium">Steakhouse · Grill · Gourmet Burgers</p>
+<div class="flex items-center justify-between pt-1 border-t border-surface-container-low text-body-sm font-body-sm">
+<div class="flex items-center space-x-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary" data-icon="delivery_dining">delivery_dining</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">R15.00 delivery</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container-low px-2 py-0.5 rounded">Min order R80</span>
+</div>
+</div>
+</article>
+<!-- Restaurant Card 2: Sushi on Sea Point (Closed state) -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm border border-surface-container-high hover:shadow-md transition-shadow duration-200 opacity-95">
+<!-- Card Hero Image Container with dimming for closed state -->
+<div class="relative w-full h-44 bg-surface-container">
+<img class="w-full h-full object-cover filter brightness-[0.85] grayscale-[20%]" data-alt="An exquisite artisanal sushi platter featuring vibrant fresh salmon nigiri, avocado maki rolls, and tuna sashimi neatly arranged with pickled ginger and wasabi on a dark bamboo tray with subtle oceanfront restaurant ambiance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3eDJ2HiVGd-kutBvSshlDPTkcUaauHVSqtZ8SfRefw3_j5CEbTFzoAwWbsDhzZzZ0tDW1oow1VYSEJoPdOnDfFdZGFIuvelZWpjWJZrAtFUldUzIempGHi5Wbw42bVNc2JpDxRFXDlaag2WqzbhwMrwqVCjLQZXv4t6lxYG01SLcGu3ZboaX3S9CvbVHByfUc22aaL0l0GMDazdpjaOgpTmBTuLgZqVSDw5sFzkA"/>
+<!-- Closed Status Badge -->
+<div class="absolute top-3 left-3">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-error-container text-on-error-container font-bold shadow-sm">
+              CLOSED (Opens 17:00)
+            </span>
+</div>
+<!-- Favorite Action Button -->
+<button aria-label="Favorite" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-on-surface-variant shadow-sm hover:scale-105 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]" data-icon="favorite">favorite</span>
+</button>
+<!-- ETA & Delivery Badge Overlay -->
+<div class="absolute bottom-3 right-3 flex items-center space-x-1.5">
+<div class="bg-surface-container-lowest/95 backdrop-blur-sm px-2.5 py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant flex items-center space-x-1 shadow-sm font-bold">
+<span class="material-symbols-outlined text-[14px] text-secondary" data-icon="schedule">schedule</span>
+<span>25 mins</span>
+</div>
+</div>
+</div>
+<!-- Card Metadata Bay -->
+<div class="p-3.5 space-y-1.5">
+<div class="flex justify-between items-start">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight">Sushi on Sea Point</h2>
+<div class="flex items-center bg-surface-container px-2 py-0.5 rounded-full shrink-0">
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant mr-1" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">4.3</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant ml-1">(320+)</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium">Sushi · Japanese · Asian Fusion</p>
+<div class="flex items-center justify-between pt-1 border-t border-surface-container-low text-body-sm font-body-sm">
+<div class="flex items-center space-x-1 text-tertiary">
+<span class="material-symbols-outlined text-[16px]" data-icon="local_shipping">local_shipping</span>
+<span class="font-label-md text-label-md font-bold">Free Delivery (R0.00)</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container-low px-2 py-0.5 rounded">Pre-order now</span>
+</div>
+</div>
+</article>
+<!-- Restaurant Card 3: Mzansi Soul Kitchen -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm border border-surface-container-high hover:shadow-md transition-shadow duration-200">
+<!-- Card Hero Image Container -->
+<div class="relative w-full h-44 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="An authentic, sizzling South African braai feast with seasoned boerewors swirls, flame-grilled lamb chops, chakalaka relish in a ceramic bowl, and warm pap, captured outdoors in golden Cape Town sunset lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDO6pG8h4RVCQJTMBb5TnT9TsRmqgihh0IZyjM-p2AF_5xpMbxYsb14GAYTA-ZgQdmUwMqHjPlyPTBB743JNsUpXP5_-XaNm7QBVlkxYgRSs4uCoi2H6SEOZZk0IbJ8ELxGSuuoCr4je1CwRzvSX-5ZsagIDv2ZvrdJMggFRfFz9BtDfFlahzk3K52JpBQqbbVIzDQKpC_S4FziCHh6cH7KReE8-GGq5faTUSfekyA"/>
+<!-- Status Badge -->
+<div class="absolute top-3 left-3">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-tertiary-container text-on-tertiary-container font-bold shadow-sm">
+              OPEN
+            </span>
+</div>
+<!-- Favorite Action Button -->
+<button aria-label="Favorite" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-on-surface-variant shadow-sm hover:scale-105 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]" data-icon="favorite">favorite</span>
+</button>
+<!-- ETA & Delivery Badge Overlay -->
+<div class="absolute bottom-3 right-3 flex items-center space-x-1.5">
+<div class="bg-surface-container-lowest/95 backdrop-blur-sm px-2.5 py-1 rounded-full font-label-sm text-label-sm text-on-surface flex items-center space-x-1 shadow-sm font-bold">
+<span class="material-symbols-outlined text-[14px] text-secondary" data-icon="schedule">schedule</span>
+<span>28 mins</span>
+</div>
+</div>
+</div>
+<!-- Card Metadata Bay -->
+<div class="p-3.5 space-y-1.5">
+<div class="flex justify-between items-start">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight">Mzansi Soul Kitchen</h2>
+<div class="flex items-center bg-primary-fixed/60 px-2 py-0.5 rounded-full shrink-0">
+<span class="material-symbols-outlined text-[14px] text-primary mr-1" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md text-on-primary-fixed-variant font-bold">4.8</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant ml-1">(850+)</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium">Traditional · Braai · African</p>
+<div class="flex items-center justify-between pt-1 border-t border-surface-container-low text-body-sm font-body-sm">
+<div class="flex items-center space-x-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary" data-icon="delivery_dining">delivery_dining</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">R18.50 delivery</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold bg-primary-fixed/30 px-2 py-0.5 rounded">Popular locally</span>
+</div>
+</div>
+</article>
+<!-- Restaurant Card 4: Bella Italia Pizzeria -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm border border-surface-container-high hover:shadow-md transition-shadow duration-200">
+<!-- Card Hero Image Container -->
+<div class="relative w-full h-44 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A piping hot artisanal wood-fired Neapolitan pizza with blistered leopard crust, melted buffalo mozzarella cheese, fresh green basil leaves, and rich tomato sauce on a rustic wooden board with flour dusting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsigOqfyU7wtRhuUq3Yl6KAL0aeY7SZWAHPl0Pxbogj6j2PSUheMWenFBQqU1Z9V5NdarT8CQFkRAG_sPvse43Eu-zVMQaOl6EB_KMQtYVy8E9PH8I4nXMiW9_vYSlxt542JswLIHoHFqZ2gPOxXpfTwc_lE2-n7U7_B10BFTz6_3wkvlC7Q20QQclu1LZJLkcigQytQWwLMkX9k2SNbDBvKqF-UyCdmF4rTaB8yk"/>
+<!-- Status Badge -->
+<div class="absolute top-3 left-3">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-tertiary-container text-on-tertiary-container font-bold shadow-sm">
+              OPEN
+            </span>
+</div>
+<!-- Favorite Action Button -->
+<button aria-label="Favorite" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-on-surface-variant shadow-sm hover:scale-105 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]" data-icon="favorite">favorite</span>
+</button>
+<!-- ETA & Delivery Badge Overlay -->
+<div class="absolute bottom-3 right-3 flex items-center space-x-1.5">
+<div class="bg-surface-container-lowest/95 backdrop-blur-sm px-2.5 py-1 rounded-full font-label-sm text-label-sm text-on-surface flex items-center space-x-1 shadow-sm font-bold">
+<span class="material-symbols-outlined text-[14px] text-secondary" data-icon="schedule">schedule</span>
+<span>35 mins</span>
+</div>
+</div>
+</div>
+<!-- Card Metadata Bay -->
+<div class="p-3.5 space-y-1.5">
+<div class="flex justify-between items-start">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight">Bella Italia Pizzeria</h2>
+<div class="flex items-center bg-primary-fixed/60 px-2 py-0.5 rounded-full shrink-0">
+<span class="material-symbols-outlined text-[14px] text-primary mr-1" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md text-on-primary-fixed-variant font-bold">4.5</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant ml-1">(410+)</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium">Pizza · Italian · Pasta</p>
+<div class="flex items-center justify-between pt-1 border-t border-surface-container-low text-body-sm font-body-sm">
+<div class="flex items-center space-x-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary" data-icon="delivery_dining">delivery_dining</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">R12.00 delivery</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container-low px-2 py-0.5 rounded">20% off over R150</span>
+</div>
+</div>
+</article>
+</main>
+<!-- Bottom Navigation Bar from Shared Components JSON -->
+<!-- Screen context is Restaurant Discovery Browse Screen -> Active state mapped to 'Browse' -->
+<nav class="fixed bottom-0 left-0 right-0 w-full z-50 flex justify-around items-center px-space-sm py-space-xs pb-safe max-w-md mx-auto bg-surface-container-lowest shadow-lg">
+<!-- Destination 1: Home (Inactive) -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:bg-surface-container active:scale-95 transition-all duration-150">
+<span class="material-symbols-outlined text-[24px]" data-icon="home">home</span>
+<span class="font-label-sm text-label-sm mt-0.5">Home</span>
+</button>
+<!-- Destination 2: Browse (Active Destination mapped to this Browse screen) -->
+<button class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-space-md py-space-xs hover:bg-surface-container active:scale-95 transition-all duration-150">
+<span class="material-symbols-outlined text-[24px]" data-icon="search" data-weight="fill" style="font-variation-settings: 'FILL' 1;">search</span>
+<span class="font-label-sm text-label-sm mt-0.5">Browse</span>
+</button>
+<!-- Destination 3: Orders (Inactive) -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:bg-surface-container active:scale-95 transition-all duration-150">
+<span class="material-symbols-outlined text-[24px]" data-icon="receipt_long">receipt_long</span>
+<span class="font-label-sm text-label-sm mt-0.5">Orders</span>
+</button>
+<!-- Destination 4: Profile (Inactive) -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:bg-surface-container active:scale-95 transition-all duration-150">
+<span class="material-symbols-outlined text-[24px]" data-icon="person">person</span>
+<span class="font-label-sm text-label-sm mt-0.5">Profile</span>
+</button>
+</nav>
+</div>
+</body></html>
