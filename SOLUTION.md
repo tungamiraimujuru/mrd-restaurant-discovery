@@ -126,6 +126,16 @@ Chosen: preserve user input and scroll position, and reduce list work. Evidence:
 
 I used an AI assistant throughout, treating it as a fast pair programmer whose output is a draft.
 
+**Design with Stitch.** The assessment brief was entered into Google Stitch, which produced the
+Discovery and Details screens and a design system. Stitch was then asked for three variations of the
+Discovery screen (editorial, high density, Material 3 expressive). The designs were used as input for
+the composables, not copied: the colour, type and shape tokens became the theme in `:core:designsystem`,
+and anything the data model could not back (review counts, offers, distances, a menu) was left out.
+The exports, screenshots and the full mapping are in `docs/DESIGN.md`. I looked at all three variations and chose the first generated design, because the timebox meant
+committing to one design to get started, and it covered everything the brief asks for, so it was a
+good fit for a first iteration. The variations stay in `docs/design` for comparison.
+and why.
+
 **How it was kept productive**
 
 - *Plan first, then small steps.* The work was broken into eleven phases and each phase into commits
